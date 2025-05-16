@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>13✖13 Cell Prefabs</name>
+    <author>trigger</author>
+    <url></url>
+    <supportedVersions><li>1.5</li></supportedVersions>
+    <packageId>trigger.cellprefabs</packageId>
+	<modDependencies>
+		<li>
+			<packageId>Sarg.AlphaPrefabs</packageId>
+			<displayName>Alpha Prefabs</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3070780021</steamWorkshopUrl>
+			<downloadUrl></downloadUrl>
+		</li>
+	</modDependencies>
+  <loadBefore />   
+  <loadAfter />	
+<modIconPath IgnoreIfNoMatchingField="True">13_13_Cell_Prefabs_Logo</modIconPath>
+  	<description>
+	
+	需要Alpha Prefabs
+https://steamcommunity.com/sharedfiles/filedetails/?id=3070780021
+
+13✖13 预制房间，原版阿尔法预制体很多不规则建筑，导致实用性很差，现在通过全新的13✖13 预制房间所有房间都是严格的正方形！
+
+一共添加了63个方形预制房间。
+
+支持MOD
+Dubs Rimatomics 边缘核能
+Rimefeller 边缘石化
+Dubs Bad Hygiene 边缘卫生
+Vanilla Factions Expanded - Empire VE帝国扩展
+Vanilla Furniture Expanded VE家具扩展
+SRTS Expanded SRTS飞船
+
+部分设计来自B站up主 爱盘点的阿松 感谢up主的分享
+围观视频：https://www.bilibili.com/video/BV1sb421b7EW
+
+Translation:
+
+Alpha Prefabs Needed
+https://steamcommunity.com/sharedfiles/filedetails/?id=3070780021
+
+13×13 Prefab Rooms
+Many original Alpha Prefab structures are irregularly shaped, resulting in poor practicality. Now, with the new 13×13 prefab rooms, all rooms are strictly square!
+
+Total of 63 square-shaped prefab rooms added.
+
+Supported MODs:
+
+Dubs Rimatomics
+Rimefeller
+Dubs Bad Hygiene
+Vanilla Factions Expanded - Empire
+Vanilla Furniture Expanded
+SRTS Expanded
+
+</description>
+</ModMetaData>

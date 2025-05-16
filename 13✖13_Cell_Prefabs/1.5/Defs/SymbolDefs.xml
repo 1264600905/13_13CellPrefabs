@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <KCSG.SymbolDef>
+  <defName>HotTub_Steel</defName>
+  <thing>HotTub</thing>
+  <stuff>Steel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>DeepWaterWellInlet_North</defName>
+  <thing>DeepWaterWellInlet</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>PumpingStation_North</defName>
+  <thing>PumpingStation</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>WaterTreatment</defName>
+  <thing>WaterTreatment</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>BathMat_Cloth_East</defName>
+  <thing>BathMat</thing>
+  <stuff>Cloth</stuff>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>ToiletStallDoor_WoodLog</defName>
+  <thing>ToiletStallDoor</thing>
+  <stuff>WoodLog</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>SewageSepticTank_Steel</defName>
+  <thing>SewageSepticTank</thing>
+  <stuff>Steel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>WaterTowerL</defName>
+  <thing>WaterTowerL</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>WashingMachine_North</defName>
+  <thing>WashingMachine</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>DBHSaunaSeating_WoodLog_North</defName>
+  <thing>DBHSaunaSeating</thing>
+  <stuff>WoodLog</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>DBHSaunaHeaterElec_Steel</defName>
+  <thing>DBHSaunaHeaterElec</thing>
+  <stuff>Steel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>ElectricBoiler_North</defName>
+  <thing>ElectricBoiler</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>HotWaterTank</defName>
+  <thing>HotWaterTank</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>WeaponsBench_East</defName>
+  <thing>WeaponsBench</thing>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>RadiationShielding</defName>
+  <thing>RadiationShielding</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>ReactorControl_South</defName>
+  <thing>ReactorControl</thing>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>DU_Blastdoor</defName>
+  <thing>DU_Blastdoor</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>CoolingRadiator</defName>
+  <thing>CoolingRadiator</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>LargeFuelPowerplant_North</defName>
+  <thing>LargeFuelPowerplant</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>OilPipeline</defName>
+  <thing>OilPipeline</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>PPCObelisk_Steel_North</defName>
+  <thing>PPCObelisk</thing>
+  <stuff>Steel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>RimatomicsShieldGenerator_Steel_North</defName>
+  <thing>RimatomicsShieldGenerator</thing>
+  <stuff>Steel</stuff>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>BathtubStuff_Steel_East</defName>
+  <thing>BathtubStuff</thing>
+  <stuff>Steel</stuff>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>SecurityDoor_East</defName>
+  <thing>SecurityDoor</thing>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_PrefabCatalogBuilding_North</defName>
+  <thing>AP_PrefabCatalogBuilding</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>ChemfuelHopper</defName>
+  <thing>ChemfuelHopper</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>ChemfuelSiphon</defName>
+  <thing>ChemfuelSiphon</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AirConOutdoorUnit</defName>
+  <thing>AirConOutdoorUnit</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>Shelf_WoodLog_Techist_West</defName>
+  <thing>Shelf</thing>
+  <stuff>WoodLog</stuff>
+  <styleCategory>Techist</styleCategory>
+  <rotation>West</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>Shelf_WoodLog_Techist_North</defName>
+  <thing>Shelf</thing>
+  <stuff>WoodLog</stuff>
+  <styleCategory>Techist</styleCategory>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>Shelf_WoodLog_Techist_East</defName>
+  <thing>Shelf</thing>
+  <stuff>WoodLog</stuff>
+  <styleCategory>Techist</styleCategory>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>Shelf_WoodLog_Techist_South</defName>
+  <thing>Shelf</thing>
+  <stuff>WoodLog</stuff>
+  <styleCategory>Techist</styleCategory>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFEE_GrandRoyalRug_WoolSheep_South</defName>
+  <thing>VFEE_GrandRoyalRug</thing>
+  <stuff>WoolSheep</stuff>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalStool_WoolMuffalo_North</defName>
+  <thing>VFEE_RoyalStool</thing>
+  <stuff>WoolMuffalo</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalMirror_WoodLog_South</defName>
+  <thing>VFEE_RoyalMirror</thing>
+  <stuff>WoodLog</stuff>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFEE_GrandChair_Gold_North</defName>
+  <thing>VFEE_GrandChair</thing>
+  <stuff>Gold</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_PipeOrgan_East</defName>
+  <thing>VFEE_PipeOrgan</thing>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_StellicThrone_Gold_East</defName>
+  <thing>VFEE_StellicThrone</thing>
+  <stuff>Gold</stuff>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_GrandTable_Gold_East</defName>
+  <thing>VFEE_GrandTable</thing>
+  <stuff>Gold</stuff>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFEE_PipeOrgan_South</defName>
+  <thing>VFEE_PipeOrgan</thing>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_Plasteel</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>Plasteel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_Gold</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>Gold</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_FiberComposite</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>FiberComposite</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_Silver</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>Silver</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_BlocksSandstone</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>BlocksSandstone</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_BlocksMarble</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>BlocksMarble</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_BlocksGranite</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>BlocksGranite</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_Jade</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>Jade</stuff>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_WoodLog</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>WoodLog</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_Uranium</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>Uranium</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_BlocksSlate</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>BlocksSlate</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_BlocksLimestone</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>BlocksLimestone</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_Synthylene</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>Synthylene</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>AP_FakeSculptureSmallF_Steel</defName>
+  <thing>AP_FakeSculptureSmallF</thing>
+  <stuff>Steel</stuff>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureSmall_Uranium</defName>
+  <thing>VFEE_RoyalSculptureSmall</thing>
+  <stuff>Uranium</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureSmall_BlocksMarble</defName>
+  <thing>VFEE_RoyalSculptureSmall</thing>
+  <stuff>BlocksMarble</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureLarge_BlocksMarble</defName>
+  <thing>VFEE_RoyalSculptureLarge</thing>
+  <stuff>BlocksMarble</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureLarge_WoodLog</defName>
+  <thing>VFEE_RoyalSculptureLarge</thing>
+  <stuff>WoodLog</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureSmall_FiberComposite</defName>
+  <thing>VFEE_RoyalSculptureSmall</thing>
+  <stuff>FiberComposite</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureSmall_Plasteel</defName>
+  <thing>VFEE_RoyalSculptureSmall</thing>
+  <stuff>Plasteel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_GrandTable_Gold_North</defName>
+  <thing>VFEE_GrandTable</thing>
+  <stuff>Gold</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureSmall_WoodLog</defName>
+  <thing>VFEE_RoyalSculptureSmall</thing>
+  <stuff>WoodLog</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureSmall_Steel</defName>
+  <thing>VFEE_RoyalSculptureSmall</thing>
+  <stuff>Steel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_ImperialBanner_Cloth</defName>
+  <thing>VFEE_ImperialBanner</thing>
+  <stuff>Cloth</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_StellicThrone_Gold_South</defName>
+  <thing>VFEE_StellicThrone</thing>
+  <stuff>Gold</stuff>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalSculptureGrand_Plasteel</defName>
+  <thing>VFEE_RoyalSculptureGrand</thing>
+  <stuff>Plasteel</stuff>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFEE_SteleSmall_Jade</defName>
+  <thing>VFEE_SteleSmall</thing>
+  <stuff>Jade</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalStool_Cloth_North</defName>
+  <thing>VFEE_RoyalStool</thing>
+  <stuff>Cloth</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalMirror_WoodLog_West</defName>
+  <thing>VFEE_RoyalMirror</thing>
+  <stuff>WoodLog</stuff>
+  <rotation>West</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFEE_RoyalMirror_WoodLog_East</defName>
+  <thing>VFEE_RoyalMirror</thing>
+  <stuff>WoodLog</stuff>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFE_TableDrugLabElectric_Steel_South</defName>
+  <thing>VFE_TableDrugLabElectric</thing>
+  <stuff>Steel</stuff>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFE_DrugCabinet_East</defName>
+  <thing>VFE_DrugCabinet</thing>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFEArch_ArmoredWall_Plasteel</defName>
+  <thing>VFEArch_ArmoredWall</thing>
+  <stuff>Plasteel</stuff>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>Spacer_OutdoorLamp</defName>
+  <thing>Spacer_OutdoorLamp</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>SRAF_North</defName>
+  <thing>SRAF</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>SRAFTek_North</defName>
+  <thing>SRAFTek</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>SRTSMkII_North</defName>
+  <thing>SRTSMkII</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>SRTSMkIII_North</defName>
+  <thing>SRTSMkIII</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>SRTSMkIV</defName>
+  <thing>SRTSMkIV</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFE_AdvancedBattery_East</defName>
+  <thing>VFE_AdvancedBattery</thing>
+  <rotation>East</rotation>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>VFE_TableStoveLarge_South</defName>
+  <thing>VFE_TableStoveLarge</thing>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFE_TableTailorLarge_WoodLog_South</defName>
+  <thing>VFE_TableTailorLarge</thing>
+  <stuff>WoodLog</stuff>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFE_FabricationCabinet_North</defName>
+  <thing>VFE_FabricationCabinet</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFE_MachiningCabinet_North</defName>
+  <thing>VFE_MachiningCabinet</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>VFE_TableMachiningLarge_North</defName>
+  <thing>VFE_TableMachiningLarge</thing>
+</KCSG.SymbolDef>
+<KCSG.SymbolDef>
+  <defName>SecurityDoor_North</defName>
+  <thing>SecurityDoor</thing>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>SecurityDoor_West</defName>
+  <thing>SecurityDoor</thing>
+  <rotation>West</rotation>
+</KCSG.SymbolDef>
+
+<KCSG.SymbolDef>
+  <defName>SecurityDoor_South</defName>
+  <thing>SecurityDoor</thing>
+  <rotation>South</rotation>
+</KCSG.SymbolDef>
+</Defs>
