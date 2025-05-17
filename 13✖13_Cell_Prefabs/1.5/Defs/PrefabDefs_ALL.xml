@@ -1,644 +1,644 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_13_13_BeginHouse1</defName>
-       <label>初始房间1</label>
-       <shortLabel>初始房间1</shortLabel>
-       <description>一个开局就能用的 13*13 小房间附带冷库和监狱</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_13_13_BeginHouse1_Preview</detailedImage>
-       <layout>AP_13_13_BeginHouse1</layout>
-       <marketvalue>500</marketvalue>
-       <author>trigger</author>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>ComplexFurniture</li>
-           <li>Electricity</li>
-       </researchPrerequisites>
-       <suggestedMods/>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_13_13_BeginHouse2</defName>
-       <label>初始房间2</label>
-       <shortLabel>初始房间2</shortLabel>
-       <description>一个开局就能用的 13*13 小房间附带冷库，营养膏机和机械培育器</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_13_13_BeginHouse2_Preview</detailedImage>
-       <layout>AP_13_13_BeginHouse2</layout>
-       <marketvalue>600</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>ComplexFurniture</li>
-           <li>NutrientPaste</li>
-           <li>AirConditioning</li>
-           <li>MicroelectronicsBasics</li>
-           <li>Stonecutting</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_13_13_BeginHouse3</defName>
-       <label>初始房间3</label>
-       <shortLabel>初始房间3</shortLabel>
-       <description>一个开局就能用的 13*13 小房间附带冷库，异常收容房间</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_13_13_BeginHouse3_Preview</detailedImage>
-       <layout>AP_13_13_BeginHouse3</layout>
-       <marketvalue>500</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>ComplexFurniture</li>
-           <li>Stonecutting</li>
-           <li>Smithing</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_ResearchAndMedicalRoom</defName>
-       <label>科研和医疗房间</label>
-       <shortLabel>科研和医疗房间</shortLabel>
-       <description>双高级科研台和8个医疗床位，并且配备水栽培提供医药</description>
-       <priority>1</priority>
-       <category>13_13_Labor</category>
-       <detailedImage>UI/Prefabs_Preview/AP_ResearchAndMedicalRoom_Preview</detailedImage>
-       <layout>AP_ResearchAndMedicalRoom</layout>
-       <marketvalue>3000</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Hydroponics</li>
-           <li>SterileMaterials</li>
-           <li>ComplexFurniture</li>
-           <li>MicroelectronicsBasics</li>
-           <li>MultiAnalyzer</li>
-           <li>FlatscreenTelevision</li>
-           <li>HospitalBed</li>
-           <li>DrugProduction</li>
-           <li>Brewing</li>
-           <li>VitalsMonitor</li>
-           <li>AirConditioning</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_DeathRestAndStoreRoom</defName>
-       <label>死眠室和储存室内</label>
-       <shortLabel>死眠室和储存室内</shortLabel>
-       <description>两个顶级死眠室和大型冷库</description>
-       <priority>1</priority>
-       <category>13_13_StoreRoom</category>
-       <detailedImage>UI/Prefabs_Preview/AP_DeathRestAndStoreRoom_Preview</detailedImage>
-       <layout>AP_DeathRestAndStoreRoom</layout>
-       <marketvalue>2544</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>SterileMaterials</li>
-           <li>ComplexFurniture</li>
-           <li>NutrientPaste</li>
-           <li>AirConditioning</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_BathRoom</defName>
-       <label>浴室</label>
-       <shortLabel>浴室</shortLabel>
-       <description>两个厕所和浴室，一个桑拿房和储水装置</description>
-       <priority>1</priority>
-       <category>13_13_Bath</category>
-       <detailedImage>UI/Prefabs_Preview/AP_BathRoom_Preview</detailedImage>
-       <layout>AP_BathRoom</layout>
-       <marketvalue>2139</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.dubsbadhygiene</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_ThroneRoom</defName>
-       <label>谒见庭</label>
-       <shortLabel>谒见庭</shortLabel>
-       <description>13*13 规格的谒见庭，同时可以进行娱乐和吃饭</description>
-       <priority>1</priority>
-       <category>13_13_Culture</category>
-       <detailedImage>UI/Prefabs_Preview/AP_ThroneRoom_Preview</detailedImage>
-       <layout>AP_ThroneRoom</layout>
-       <marketvalue>5366</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>Electricity</li>
-           <li>CarpetMaking</li>
-           <li>ComplexFurniture</li>
-           <li>FlatscreenTelevision</li>
-           <li>TreeSowing</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_BigResearchRoom</defName>
-       <label>大型科研室</label>
-       <shortLabel>大型科研室</shortLabel>
-       <description>拥有三个高级研究台的大型科研室，附带一个远距离扫描</description>
-       <priority>1</priority>
-       <category>13_13_Labor</category>
-       <detailedImage>UI/Prefabs_Preview/AP_BigResearchRoom_Preview</detailedImage>
-       <layout>AP_BigResearchRoom</layout>
-       <marketvalue>3385</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>MicroelectronicsBasics</li>
-           <li>SterileMaterials</li>
-           <li>ComplexFurniture</li>
-           <li>LongRangeMineralScanner</li>
-           <li>MultiAnalyzer</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_BasinRoom</defName>
-       <label>水栽培室</label>
-       <shortLabel>水栽培室</shortLabel>
-       <description>水栽培室附带一些酿酒桶</description>
-       <priority>1</priority>
-       <category>13_13_Farm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_BasinRoom_Preview</detailedImage>
-       <layout>AP_BasinRoom</layout>
-       <marketvalue>3891</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>SterileMaterials</li>
-           <li>Brewing</li>
-           <li>Hydroponics</li>
-           <li>Firefoam</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_SmallRimefellerRoom</defName>
-       <label>小型石化产线房</label>
-       <shortLabel>小型石化产线房</shortLabel>
-       <description>包含边缘石化的部分产品线</description>
-       <priority>1</priority>
-       <category>13_13_Oil</category>
-       <detailedImage>UI/Prefabs_Preview/AP_SmallRimefellerRoom_Preview</detailedImage>
-       <layout>AP_SmallRimefellerRoom</layout>
-       <marketvalue>3503</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.rimefeller</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_16PawnBarrackRoom</defName>
-       <label>16人集体宿舍</label>
-       <shortLabel>16人集体宿舍</shortLabel>
-       <description>有16个床位的集体宿舍</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_16PawnBarrackRoom_Preview</detailedImage>
-       <layout>AP_16PawnBarrackRoom</layout>
-       <marketvalue>1387</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>Electricity</li>
-           <li>CarpetMaking</li>
-           <li>ComplexFurniture</li>
-           <li>TreeSowing</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_4PawnBarrackRoom</defName>
-       <label>4人宿舍</label>
-       <shortLabel>4人宿舍</shortLabel>
-       <description>有4个双人床位的宿舍</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_4PawnBarrackRoom_Preview</detailedImage>
-       <layout>AP_4PawnBarrackRoom</layout>
-       <marketvalue>1701</marketvalue>
-       <researchPrerequisites>
-           <li>CarpetMaking</li>
-           <li>Electricity</li>
-           <li>ComplexFurniture</li>
-           <li>TreeSowing</li>
-           <li>AirConditioning</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_BigStoreRoom</defName>
-       <label>大型仓库</label>
-       <shortLabel>大型仓库</shortLabel>
-       <description>有40个物品架的大型仓库</description>
-       <priority>1</priority>
-       <category>13_13_StoreRoom</category>
-       <detailedImage>UI/Prefabs_Preview/AP_BigStoreRoom_Preview</detailedImage>
-       <layout>AP_BigStoreRoom</layout>
-       <marketvalue>1286</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-           <li>ComplexFurniture</li>
-           <li>Firefoam</li>
-           <li>MicroelectronicsBasics</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_AnomalyWorkshop</defName>
-       <label>异常工作坊</label>
-       <shortLabel>异常工作坊</shortLabel>
-       <description>带有异常和生物科技的工作坊</description>
-       <priority>1</priority>
-       <category>13_13_WorkShop</category>
-       <detailedImage>UI/Prefabs_Preview/AP_AnomalyWorkshop_Preview</detailedImage>
-       <layout>AP_AnomalyWorkshop</layout>
-       <marketvalue>3225</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-           <li>ComplexClothing</li>
-           <li>ComplexFurniture</li>
-           <li>BiofuelRefining</li>
-           <li>Machining</li>
-           <li>Smithing</li>
-           <li>Fabrication</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_AtomicsPowerRoomPart1</defName>
-       <label>核电站第一部分</label>
-       <shortLabel>核电站第一部分</shortLabel>
-       <description>带有核电的第一部分，效率只能拉到30%，可以和第二部分一起提升效率</description>
-       <priority>1</priority>
-       <category>13_13_Atomics</category>
-       <detailedImage>UI/Prefabs_Preview/AP_AtomicsPowerRoomPart1_Preview</detailedImage>
-       <layout>AP_AtomicsPowerRoomPart1</layout>
-       <marketvalue>3246</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>Electricity</li>
-           <li>Autodoors</li>
-           <li>ComplexFurniture</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.rimatomics</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_AtomicsPowerRoomPart2</defName>
-       <label>核电站第二部分</label>
-       <shortLabel>核电站第二部分</shortLabel>
-       <description>带有核电的第二部分，干冷式冷却塔，可以提升第一部分效率</description>
-       <priority>1</priority>
-       <category>13_13_Atomics</category>
-       <detailedImage>UI/Prefabs_Preview/AP_AtomicsPowerRoomPart2_Preview</detailedImage>
-       <layout>AP_AtomicsPowerRoomPart2</layout>
-       <marketvalue>2736</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>Electricity</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.rimatomics</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_RimefellerPowerRoom</defName>
-       <label>石化发电室</label>
-       <shortLabel>石化发电室</shortLabel>
-       <description>边缘石化的发电室，配有6个16000w的石化发电机</description>
-       <priority>1</priority>
-       <category>13_13_Oil</category>
-       <detailedImage>UI/Prefabs_Preview/AP_RimefellerPowerRoom_Preview</detailedImage>
-       <layout>AP_RimefellerPowerRoom</layout>
-       <marketvalue>5505</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.rimefeller</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_BestWorkshop</defName>
-       <label>最佳工坊</label>
-       <shortLabel>最佳工坊</shortLabel>
-       <description>拥有全部工作台的完美工坊，附带一些置物架</description>
-       <priority>1</priority>
-       <category>13_13_WorkShop</category>
-       <detailedImage>UI/Prefabs_Preview/AP_BestWorkshop_Preview</detailedImage>
-       <layout>AP_BestWorkshop</layout>
-       <marketvalue>3438</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-           <li>ComplexFurniture</li>
-           <li>Firefoam</li>
-           <li>ComplexClothing</li>
-           <li>Machining</li>
-           <li>Fabrication</li>
-           <li>Smithing</li>
-           <li>DrugProduction</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_RoyalBedRoomAndPrison</defName>
-       <label>贵族房间和监狱</label>
-       <shortLabel>贵族房间和监狱</shortLabel>
-       <description>两个贵族房间,最高支持总督和8人监狱</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_RoyalBedRoomAndPrison_Preview</detailedImage>
-       <layout>AP_RoyalBedRoomAndPrison</layout>
-       <marketvalue>3948</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-           <li>ComplexFurniture</li>
-           <li>HospitalBed</li>
-           <li>AirConditioning</li>
-           <li>Batteries</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_BigMechLabor</defName>
-       <label>大型机械培育房</label>
-       <shortLabel>大型机械培育房</shortLabel>
-       <description>有全部机械族科技的机械培育房间</description>
-       <priority>1</priority>
-       <category>13_13_WorkShop</category>
-       <detailedImage>UI/Prefabs_Preview/AP_BigMechLabor_Preview</detailedImage>
-       <layout>AP_BigMechLabor</layout>
-       <marketvalue>3796</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-           <li>ComplexFurniture</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_7Count_ContainmentCellRoom</defName>
-       <label>异常收容房7个</label>
-       <shortLabel>异常收容房7个</shortLabel>
-       <description>根据不同威胁分级，最多收容七个异常</description>
-       <priority>1</priority>
-       <category>13_13_Anomal</category>
-       <detailedImage>UI/Prefabs_Preview/AP_7Count_ContainmentCellRoom_Preview</detailedImage>
-       <layout>AP_7Count_ContainmentCellRoom</layout>
-       <marketvalue>1784</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>BioferriteShaping</li>
-           <li>EntityContainment</li>
-           <li>SecurityDoor</li>
-           <li>BioferriteHarvesting</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_AtomicsResearchRoom</defName>
-       <label>核能科研房</label>
-       <shortLabel>核能科研房</shortLabel>
-       <description>科研核能科技，并且可以存储铀棒</description>
-       <priority>1</priority>
-       <category>13_13_Atomics</category>
-       <detailedImage>UI/Prefabs_Preview/AP_AtomicsResearchRoom_Preview</detailedImage>
-       <layout>AP_AtomicsResearchRoom</layout>
-       <marketvalue>3000</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>Electricity</li>
-           <li>ComplexFurniture</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.rimatomics</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_8Room_AnomalyContainment</defName>
-       <label>异常收容8房间</label>
-       <shortLabel>异常收容8房间</shortLabel>
-       <description>有8个独立房间的异常收容房，防止群体越狱</description>
-       <priority>1</priority>
-       <category>13_13_Anomal</category>
-       <detailedImage>UI/Prefabs_Preview/AP_8Room_AnomalyContainment_Preview</detailedImage>
-       <layout>AP_8Room_AnomalyContainment</layout>
-       <marketvalue>1158</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_AtomicsHighEnergyBatteryRoom</defName>
-       <label>核能高能电池房</label>
-       <shortLabel>核能高能电池房</shortLabel>
-       <description>12个高能电池的房间，再也不怕没电了</description>
-       <priority>1</priority>
-       <category>13_13_Atomics</category>
-       <detailedImage>UI/Prefabs_Preview/AP_AtomicsHighEnergyBatteryRoom_Preview</detailedImage>
-       <layout>AP_AtomicsHighEnergyBatteryRoom</layout>
-       <marketvalue>4224</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.rimatomics</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_BabyPlayRoom</defName>
-       <label>育儿室</label>
-       <shortLabel>育儿室</shortLabel>
-       <description>有教室和育儿室的房间</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_BabyPlayRoom_Preview</detailedImage>
-       <layout>AP_BabyPlayRoom</layout>
-       <marketvalue>3618</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>ComplexFurniture</li>
-           <li>CarpetMaking</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_GeneLabor</defName>
-       <label>基因室</label>
-       <shortLabel>基因室</shortLabel>
-       <description>最高支持78复杂度的基因室</description>
-       <priority>1</priority>
-       <category>13_13_WorkShop</category>
-       <detailedImage>UI/Prefabs_Preview/AP_GeneLabor_Preview</detailedImage>
-       <layout>AP_GeneLabor</layout>
-       <marketvalue>5849</marketvalue>
-       <researchPrerequisites>
-           <li>SterileMaterials</li>
-           <li>Electricity</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_ChamberAndRangelandRoom</defName>
-       <label>仪式房和牧场</label>
-       <shortLabel>仪式房和牧场</shortLabel>
-       <description>一个仪式房和小型牧场</description>
-       <priority>1</priority>
-       <category>13_13_Culture</category>
-       <detailedImage>UI/Prefabs_Preview/AP_ChamberAndRangelandRoom_Preview</detailedImage>
-       <layout>AP_ChamberAndRangelandRoom</layout>
-       <marketvalue>1955</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>AirConditioning</li>
-           <li>ComplexFurniture</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_Anomaly8Room</defName>
-       <label>8容纳异常房</label>
-       <shortLabel>8容纳异常房</shortLabel>
-       <description>可以同时收容8个异常的收容房间</description>
-       <priority>1</priority>
-       <category>13_13_Anomal</category>
-       <detailedImage>UI/Prefabs_Preview/AP_Anomaly8Room_Preview</detailedImage>
-       <layout>AP_Anomaly8Room</layout>
-       <marketvalue>1406</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_RoyalRoom2Bed</defName>
-       <label>贵族房间2个</label>
-       <shortLabel>贵族房间2个</shortLabel>
-       <description>有两个配备厕所的贵族房间</description>
-       <priority>1</priority>
-       <category>13_13_Dorm</category>
-       <detailedImage>UI/Prefabs_Preview/AP_RoyalRoom2Bed_Preview</detailedImage>
-       <layout>AP_RoyalRoom2Bed</layout>
-       <marketvalue>3896</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-           <li>ComplexFurniture</li>
-           <li>TreeSowing</li>
-       </researchPrerequisites>
-       <modPrerequisites>
-           <li>dubwise.dubsbadhygiene</li>
-       </modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_DefensRoom1</defName>
-       <label>防御小屋</label>
-       <shortLabel>防御小屋</shortLabel>
-       <description>限流防御小屋，带三个迫击炮</description>
-       <priority>1</priority>
-       <category>13_13_Defens</category>
-       <detailedImage>UI/Prefabs_Preview/AP_DefensRoom1_Preview</detailedImage>
-       <layout>AP_DefensRoom1</layout>
-       <marketvalue>2745</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Mortars</li>
-           <li>ComplexFurniture</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_NeuralRoom</defName>
-       <label>超频房间</label>
-       <shortLabel>超频房间</shortLabel>
-       <description>科技文化超频房间，提供8个小人的生体递归和神经超频装置</description>
-       <priority>1</priority>
-       <category>13_13_Culture</category>
-       <detailedImage>UI/Prefabs_Preview/AP_NeuralRoom_Preview</detailedImage>
-       <layout>AP_NeuralRoom</layout>
-       <marketvalue>2529</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>Electricity</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_ToxPowerRoom</defName>
-       <label>污染发电房</label>
-       <shortLabel>污染发电房</shortLabel>
-       <description>16个污染发电机发电的房间</description>
-       <priority>1</priority>
-       <category>13_13_Power</category>
-       <detailedImage>UI/Prefabs_Preview/AP_ToxPowerRoom_Preview</detailedImage>
-       <layout>AP_ToxPowerRoom</layout>
-       <marketvalue>6026</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>Stonecutting</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_ChemFuelPowerRoom</defName>
-       <label>燃料发电房</label>
-       <shortLabel>燃料发电房</shortLabel>
-       <description>8个燃料发电机和2个太阳能发电机房间</description>
-       <priority>1</priority>
-       <category>13_13_Power</category>
-       <detailedImage>UI/Prefabs_Preview/AP_ChemFuelPowerRoom_Preview</detailedImage>
-       <layout>AP_ChemFuelPowerRoom</layout>
-       <marketvalue>1906</marketvalue>
-       <researchPrerequisites>
-           <li>Electricity</li>
-           <li>ComplexFurniture</li>
-           <li>Batteries</li>
-           <li>SolarPanels</li>
-           <li>BiofuelRefining</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
-       <defName>AP_MortarRoom</defName>
-       <label>迫击炮房间</label>
-       <shortLabel>迫击炮房间</shortLabel>
-       <description>8个迫击炮房间和两组空投仓的房间</description>
-       <priority>1</priority>
-       <category>13_13_Defens</category>
-       <detailedImage>UI/Prefabs_Preview/AP_MortarRoom_Preview</detailedImage>
-       <layout>AP_MortarRoom</layout>
-       <marketvalue>3687</marketvalue>
-       <researchPrerequisites>
-           <li>Stonecutting</li>
-           <li>Electricity</li>
-           <li>Mortars</li>
-           <li>ComplexFurniture</li>
-           <li>TransportPod</li>
-       </researchPrerequisites>
-       <modPrerequisites></modPrerequisites>
-   </AlphaPrefabs.PrefabDef>
-   <AlphaPrefabs.PrefabDef>
+ <AlphaPrefabs.PrefabDef>
+        <defName>AP_AP_13_13_BeginHouse1</defName>
+        <label>Initial Room 1</label>
+        <shortLabel>Initial Room 1</shortLabel>
+        <description>A ready-to-use 13*13 compact room with freezer and prison facilities</description>
+        <priority>1</priority>
+        <category>AP_13_13_Dorm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AP_13_13_BeginHouse1_Preview</detailedImage>
+        <layout>AP_AP_13_13_BeginHouse1</layout>
+        <marketvalue>500</marketvalue>
+        <author>trigger</author>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+            <li>ComplexFurniture</li>
+            <li>Electricity</li>
+        </researchPrerequisites>
+        <suggestedMods/>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_AP_13_13_BeginHouse2</defName>
+        <label>Initial Room 2</label>
+        <shortLabel>Initial Room 2</shortLabel>
+        <description>A starter 13*13 compact room with freezer, nutrient paste dispenser and mechanoid incubator</description>
+        <priority>1</priority>
+        <category>AP_13_13_Dorm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AP_13_13_BeginHouse2_Preview</detailedImage>
+        <layout>AP_AP_13_13_BeginHouse2</layout>
+        <marketvalue>600</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>ComplexFurniture</li>
+            <li>NutrientPaste</li>
+            <li>AirConditioning</li>
+            <li>MicroelectronicsBasics</li>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_AP_13_13_BeginHouse3</defName>
+        <label>Initial Room 3</label>
+        <shortLabel>Initial Room 3</shortLabel>
+        <description>A ready-to-deploy 13*13 compact room with cold storage and anomaly containment chamber</description>
+        <priority>1</priority>
+        <category>AP_13_13_Dorm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AP_13_13_BeginHouse3_Preview</detailedImage>
+        <layout>AP_AP_13_13_BeginHouse3</layout>
+        <marketvalue>500</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>ComplexFurniture</li>
+            <li>Stonecutting</li>
+            <li>Smithing</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_ResearchAndMedicalRoom</defName>
+        <label>Research and Medical Facility</label>
+        <shortLabel>Research and Medical</shortLabel>
+        <description>Dual advanced research benches with 8 medical beds and hydroponics for medicine production</description>
+        <priority>1</priority>
+        <category>AP_13_13_Labor</category>
+        <detailedImage>UI/Prefabs_Preview/AP_ResearchAndMedicalRoom_Preview</detailedImage>
+        <layout>AP_ResearchAndMedicalRoom</layout>
+        <marketvalue>3000</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Hydroponics</li>
+            <li>SterileMaterials</li>
+            <li>ComplexFurniture</li>
+            <li>MicroelectronicsBasics</li>
+            <li>MultiAnalyzer</li>
+            <li>FlatscreenTelevision</li>
+            <li>HospitalBed</li>
+            <li>DrugProduction</li>
+            <li>Brewing</li>
+            <li>VitalsMonitor</li>
+            <li>AirConditioning</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_DeathRestAndStoreRoom</defName>
+        <label>Deathrest Chamber and Storage</label>
+        <shortLabel>Deathrest and Storage</shortLabel>
+        <description>Two premium deathrest chambers and large-scale refrigerated storage</description>
+        <priority>1</priority>
+        <category>AP_13_13_StoreRoom</category>
+        <detailedImage>UI/Prefabs_Preview/AP_DeathRestAndStoreRoom_Preview</detailedImage>
+        <layout>AP_DeathRestAndStoreRoom</layout>
+        <marketvalue>2544</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>SterileMaterials</li>
+            <li>ComplexFurniture</li>
+            <li>NutrientPaste</li>
+            <li>AirConditioning</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_BathRoom</defName>
+        <label>Bathhouse</label>
+        <shortLabel>Bathhouse</shortLabel>
+        <description>Two toilets with bathing facilities, sauna room and water storage system</description>
+        <priority>1</priority>
+        <category>AP_13_13_Bath</category>
+        <detailedImage>UI/Prefabs_Preview/AP_BathRoom_Preview</detailedImage>
+        <layout>AP_BathRoom</layout>
+        <marketvalue>2139</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+        <modPrerequisites>
+            <li>dubwise.dubsbadhygiene</li>
+        </modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_ThroneRoom</defName>
+        <label>Audience Chamber</label>
+        <shortLabel>Audience Chamber</shortLabel>
+        <description>13*13规格的谒见庭，同时可以进行娱乐和吃饭</description>
+        <priority>1</priority>
+        <category>AP_13_13_Culture</category>
+        <detailedImage>UI/Prefabs_Preview/AP_ThroneRoom_Preview</detailedImage>
+        <layout>AP_ThroneRoom</layout>
+        <marketvalue>5366</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+            <li>Electricity</li>
+            <li>CarpetMaking</li>
+            <li>ComplexFurniture</li>
+            <li>FlatscreenTelevision</li>
+            <li>TreeSowing</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_BigResearchRoom</defName>
+        <label>Advanced Research Complex</label>
+        <shortLabel>Research Complex</shortLabel>
+        <description>Large research facility with three advanced research stations and long-range mineral scanner</description>
+        <priority>1</priority>
+        <category>AP_13_13_Labor</category>
+        <detailedImage>UI/Prefabs_Preview/AP_BigResearchRoom_Preview</detailedImage>
+        <layout>AP_BigResearchRoom</layout>
+        <marketvalue>3385</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>MicroelectronicsBasics</li>
+            <li>SterileMaterials</li>
+            <li>ComplexFurniture</li>
+            <li>LongRangeMineralScanner</li>
+            <li>MultiAnalyzer</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_BasinRoom</defName>
+        <label>Hydroponics Bay</label>
+        <shortLabel>Hydroponics</shortLabel>
+        <description>Hydroponics cultivation chamber with brewing barrels</description>
+        <priority>1</priority>
+        <category>AP_13_13_Farm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_BasinRoom_Preview</detailedImage>
+        <layout>AP_BasinRoom</layout>
+        <marketvalue>3891</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>SterileMaterials</li>
+            <li>Brewing</li>
+            <li>Hydroponics</li>
+            <li>Firefoam</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_SmallRimefellerRoom</defName>
+        <label>Compact Rimefeller Facility</label>
+        <shortLabel>Rimefeller Facility</shortLabel>
+        <description>Partial Rimefeller production line components</description>
+        <priority>1</priority>
+        <category>AP_13_13_Oil</category>
+        <detailedImage>UI/Prefabs_Preview/AP_SmallRimefellerRoom_Preview</detailedImage>
+        <layout>AP_SmallRimefellerRoom</layout>
+        <marketvalue>3503</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+        <modPrerequisites>
+            <li>dubwise.rimefeller</li>
+        </modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_16PawnBarrackRoom</defName>
+        <label>16-Pawn Barracks</label>
+        <shortLabel>16-Bed Barracks</shortLabel>
+        <description>Collective dormitory with 16 sleeping berths</description>
+        <priority>1</priority>
+        <category>AP_13_13_Dorm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_16PawnBarrackRoom_Preview</detailedImage>
+        <layout>AP_16PawnBarrackRoom</layout>
+        <marketvalue>1387</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+            <li>Electricity</li>
+            <li>CarpetMaking</li>
+            <li>ComplexFurniture</li>
+            <li>TreeSowing</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_4PawnBarrackRoom</defName>
+        <label>4-Pawn Dormitory</label>
+        <shortLabel>4-Bed Dorm</shortLabel>
+        <description>Living quarters with four double beds</description>
+        <priority>1</priority>
+        <category>AP_13_13_Dorm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_4PawnBarrackRoom_Preview</detailedImage>
+        <layout>AP_4PawnBarrackRoom</layout>
+        <marketvalue>1701</marketvalue>
+        <researchPrerequisites>
+            <li>CarpetMaking</li>
+            <li>Electricity</li>
+            <li>ComplexFurniture</li>
+            <li>TreeSowing</li>
+            <li>AirConditioning</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_BigStoreRoom</defName>
+        <label>Mass Storage Warehouse</label>
+        <shortLabel>Warehouse</shortLabel>
+        <description>Large-scale storage with 40 item racks</description>
+        <priority>1</priority>
+        <category>AP_13_13_StoreRoom</category>
+        <detailedImage>UI/Prefabs_Preview/AP_BigStoreRoom_Preview</detailedImage>
+        <layout>AP_BigStoreRoom</layout>
+        <marketvalue>1286</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Stonecutting</li>
+            <li>ComplexFurniture</li>
+            <li>Firefoam</li>
+            <li>MicroelectronicsBasics</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_AnomalyWorkshop</defName>
+        <label>Anomaly Workshop</label>
+        <shortLabel>Anomaly Workshop</shortLabel>
+        <description>Workshop integrated with anomaly and biotech research facilities</description>
+        <priority>1</priority>
+        <category>AP_13_13_WorkShop</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AnomalyWorkshop_Preview</detailedImage>
+        <layout>AP_AnomalyWorkshop</layout>
+        <marketvalue>3225</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Stonecutting</li>
+            <li>ComplexClothing</li>
+            <li>ComplexFurniture</li>
+            <li>BiofuelRefining</li>
+            <li>Machining</li>
+            <li>Smithing</li>
+            <li>Fabrication</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_AtomicsPowerRoomPart1</defName>
+        <label>Atomic Power Plant - Section 1</label>
+        <shortLabel>Reactor Core</shortLabel>
+        <description>Primary nuclear reactor section with 30% efficiency, compatible with Section 2 for enhanced output</description>
+        <priority>1</priority>
+        <category>AP_13_13_Atomics</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AtomicsPowerRoomPart1_Preview</detailedImage>
+        <layout>AP_AtomicsPowerRoomPart1</layout>
+        <marketvalue>3246</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+            <li>Electricity</li>
+            <li>Autodoors</li>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <modPrerequisites>
+            <li>dubwise.rimatomics</li>
+        </modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_AtomicsPowerRoomPart2</defName>
+        <label>Atomic Power Plant - Section 2</label>
+        <shortLabel>Cooling Tower</shortLabel>
+        <description>Dry-cooling tower module to enhance reactor core efficiency</description>
+        <priority>1</priority>
+        <category>AP_13_13_Atomics</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AtomicsPowerRoomPart2_Preview</detailedImage>
+        <layout>AP_AtomicsPowerRoomPart2</layout>
+        <marketvalue>2736</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+            <li>Electricity</li>
+        </researchPrerequisites>
+        <modPrerequisites>
+            <li>dubwise.rimatomics</li>
+        </modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_RimefellerPowerRoom</defName>
+        <label>Rimefeller Power Station</label>
+        <shortLabel>Oil Power Plant</shortLabel>
+        <description>Rimefeller power facility containing six 16,000W chemfuel generators</description>
+        <priority>1</priority>
+        <category>AP_13_13_Oil</category>
+        <detailedImage>UI/Prefabs_Preview/AP_RimefellerPowerRoom_Preview</detailedImage>
+        <layout>AP_RimefellerPowerRoom</layout>
+        <marketvalue>5505</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+        <modPrerequisites>
+            <li>dubwise.rimefeller</li>
+        </modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_BestWorkshop</defName>
+        <label>Ultimate Workshop</label>
+        <shortLabel>Master Workshop</shortLabel>
+        <description>Perfect workshop containing all production benches with storage shelves</description>
+        <priority>1</priority>
+        <category>AP_13_13_WorkShop</category>
+        <detailedImage>UI/Prefabs_Preview/AP_BestWorkshop_Preview</detailedImage>
+        <layout>AP_BestWorkshop</layout>
+        <marketvalue>3438</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Stonecutting</li>
+            <li>ComplexFurniture</li>
+            <li>Firefoam</li>
+            <li>ComplexClothing</li>
+            <li>Machining</li>
+            <li>Fabrication</li>
+            <li>Smithing</li>
+            <li>DrugProduction</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_RoyalBedRoomAndPrison</defName>
+        <label>Royal Suite and Prison Block</label>
+        <shortLabel>Royal/Prison Complex</shortLabel>
+        <description>Two noble suites (up to Count-tier) with 8-cell prison facility</description>
+        <priority>1</priority>
+        <category>AP_13_13_Dorm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_RoyalBedRoomAndPrison_Preview</detailedImage>
+        <layout>AP_RoyalBedRoomAndPrison</layout>
+        <marketvalue>3948</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Stonecutting</li>
+            <li>ComplexFurniture</li>
+            <li>HospitalBed</li>
+            <li>AirConditioning</li>
+            <li>Batteries</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_BigMechLabor</defName>
+        <label>Mechanoid Workshop</label>
+        <shortLabel>Mechanoid Lab</shortLabel>
+        <description>Complete mechanoid research and production facility</description>
+        <priority>1</priority>
+        <category>AP_13_13_WorkShop</category>
+        <detailedImage>UI/Prefabs_Preview/AP_BigMechLabor_Preview</detailedImage>
+        <layout>AP_BigMechLabor</layout>
+        <marketvalue>3796</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>Stonecutting</li>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_7Count_ContainmentCellRoom</defName>
+        <label>Anomaly Containment Cells (7)</label>
+        <shortLabel>Containment Cells</shortLabel>
+        <description>Containment system for seven anomalies based on threat classification</description>
+        <priority>1</priority>
+        <category>AP_13_13_Anomal</category>
+        <detailedImage>UI/Prefabs_Preview/AP_7Count_ContainmentCellRoom_Preview</detailedImage>
+        <layout>AP_7Count_ContainmentCellRoom</layout>
+        <marketvalue>1784</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>BioferriteShaping</li>
+            <li>EntityContainment</li>
+            <li>SecurityDoor</li>
+            <li>BioferriteHarvesting</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_AtomicsResearchRoom</defName>
+        <label>Atomic Research Lab</label>
+        <shortLabel>Nuclear Research</shortLabel>
+        <description>Nuclear technology research facility with uranium rod storage</description>
+        <priority>1</priority>
+        <category>AP_13_13_Atomics</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AtomicsResearchRoom_Preview</detailedImage>
+        <layout>AP_AtomicsResearchRoom</layout>
+        <marketvalue>3000</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+            <li>Electricity</li>
+            <li>ComplexFurniture</li>
+        </researchPrerequisites>
+        <modPrerequisites>
+            <li>dubwise.rimatomics</li>
+        </modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_8Room_AnomalyContainment</defName>
+        <label>Anomaly Containment Wing (8 Cells)</label>
+        <shortLabel>Containment Wing</shortLabel>
+        <description>Eight isolated containment chambers to prevent mass breakout events</description>
+        <priority>1</priority>
+        <category>AP_13_13_Anomal</category>
+        <detailedImage>UI/Prefabs_Preview/AP_8Room_AnomalyContainment_Preview</detailedImage>
+        <layout>AP_8Room_AnomalyContainment</layout>
+        <marketvalue>1158</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_AtomicsHighEnergyBatteryRoom</defName>
+        <label>Atomic Energy Battery Bank</label>
+        <shortLabel>Nuclear Batteries</shortLabel>
+        <description>12 high-capacity battery units - permanent power solution</description>
+        <priority>1</priority>
+        <category>AP_13_13_Atomics</category>
+        <detailedImage>UI/Prefabs_Preview/AP_AtomicsHighEnergyBatteryRoom_Preview</detailedImage>
+        <layout>AP_AtomicsHighEnergyBatteryRoom</layout>
+        <marketvalue>4224</marketvalue>
+        <researchPrerequisites>
+            <li>Stonecutting</li>
+        </researchPrerequisites>
+        <modPrerequisites>
+            <li>dubwise.rimatomics</li>
+        </modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+    <AlphaPrefabs.PrefabDef>
+        <defName>AP_BabyPlayRoom</defName>
+        <label>Nursery and Classroom</label>
+        <shortLabel>Childcare Center</shortLabel>
+        <description>Combined nursery and educational facility</description>
+        <priority>1</priority>
+        <category>AP_13_13_Dorm</category>
+        <detailedImage>UI/Prefabs_Preview/AP_BabyPlayRoom_Preview</detailedImage>
+        <layout>AP_BabyPlayRoom</layout>
+        <marketvalue>3618</marketvalue>
+        <researchPrerequisites>
+            <li>Electricity</li>
+            <li>ComplexFurniture</li>
+            <li>CarpetMaking</li>
+        </researchPrerequisites>
+        <modPrerequisites></modPrerequisites>
+    </AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_GeneLabor</defName>
+    <label>Genetics Facility</label>
+    <shortLabel>Gene Lab</shortLabel>
+    <description>Advanced genetics laboratory supporting up to 78 complexity</description>
+    <priority>1</priority>
+    <category>AP_13_13_WorkShop</category>
+    <detailedImage>UI/Prefabs_Preview/AP_GeneLabor_Preview</detailedImage>
+    <layout>AP_GeneLabor</layout>
+    <marketvalue>5849</marketvalue>
+    <researchPrerequisites>
+        <li>SterileMaterials</li>
+        <li>Electricity</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_ChamberAndRangelandRoom</defName>
+    <label>Ritual Chamber and Pasture</label>
+    <shortLabel>Ritual/Rangeland</shortLabel>
+    <description>Ceremonial chamber with attached small-scale pasture</description>
+    <priority>1</priority>
+    <category>AP_13_13_Culture</category>
+    <detailedImage>UI/Prefabs_Preview/AP_ChamberAndRangelandRoom_Preview</detailedImage>
+    <layout>AP_ChamberAndRangelandRoom</layout>
+    <marketvalue>1955</marketvalue>
+    <researchPrerequisites>
+        <li>Electricity</li>
+        <li>AirConditioning</li>
+        <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_Anomaly8Room</defName>
+    <label>Anomaly Containment Array (8)</label>
+    <shortLabel>8-Cell Containment</shortLabel>
+    <description>Containment complex capable of housing eight anomalies simultaneously</description>
+    <priority>1</priority>
+    <category>AP_13_13_Anomal</category>
+    <detailedImage>UI/Prefabs_Preview/AP_Anomaly8Room_Preview</detailedImage>
+    <layout>AP_Anomaly8Room</layout>
+    <marketvalue>1406</marketvalue>
+    <researchPrerequisites>
+        <li>Electricity</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_RoyalRoom2Bed</defName>
+    <label>Dual Noble Suites</label>
+    <shortLabel>Noble Quarters</shortLabel>
+    <description>Two noble chambers with private sanitation facilities</description>
+    <priority>1</priority>
+    <category>AP_13_13_Dorm</category>
+    <detailedImage>UI/Prefabs_Preview/AP_RoyalRoom2Bed_Preview</detailedImage>
+    <layout>AP_RoyalRoom2Bed</layout>
+    <marketvalue>3896</marketvalue>
+    <researchPrerequisites>
+        <li>Electricity</li>
+        <li>Stonecutting</li>
+        <li>ComplexFurniture</li>
+        <li>TreeSowing</li>
+    </researchPrerequisites>
+    <modPrerequisites>
+        <li>dubwise.dubsbadhygiene</li>
+    </modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_DefensRoom1</defName>
+    <label>Chokepoint Bunker</label>
+    <shortLabel>Defensive Outpost</shortLabel>
+    <description>Flow-restricted defense position with three mortar emplacements</description>
+    <priority>1</priority>
+    <category>AP_13_13_Defens</category>
+    <detailedImage>UI/Prefabs_Preview/AP_DefensRoom1_Preview</detailedImage>
+    <layout>AP_DefensRoom1</layout>
+    <marketvalue>2745</marketvalue>
+    <researchPrerequisites>
+        <li>Electricity</li>
+        <li>Mortars</li>
+        <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_NeuralRoom</defName>
+    <label>Neural Augmentation Chamber</label>
+    <shortLabel>Neuro-Enhancement</shortLabel>
+    <description>Tech-enhanced facility with bio-recursive systems and neural accelerators for eight colonists</description>
+    <priority>1</priority>
+    <category>AP_13_13_Culture</category>
+    <detailedImage>UI/Prefabs_Preview/AP_NeuralRoom_Preview</detailedImage>
+    <layout>AP_NeuralRoom</layout>
+    <marketvalue>2529</marketvalue>
+    <researchPrerequisites>
+        <li>Stonecutting</li>
+        <li>Electricity</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_ToxPowerRoom</defName>
+    <label>Toxifier Generator Plant</label>
+    <shortLabel>Toxic Power Station</shortLabel>
+    <description>Power generation complex with sixteen tox generators</description>
+    <priority>1</priority>
+    <category>AP_13_13_Power</category>
+    <detailedImage>UI/Prefabs_Preview/AP_ToxPowerRoom_Preview</detailedImage>
+    <layout>AP_ToxPowerRoom</layout>
+    <marketvalue>6026</marketvalue>
+    <researchPrerequisites>
+        <li>Electricity</li>
+        <li>Stonecutting</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_ChemFuelPowerRoom</defName>
+    <label>Chemfuel Power Station</label>
+    <shortLabel>Fuel Generators</shortLabel>
+    <description>Power complex with eight chemfuel generators and two solar arrays</description>
+    <priority>1</priority>
+    <category>AP_13_13_Power</category>
+    <detailedImage>UI/Prefabs_Preview/AP_ChemFuelPowerRoom_Preview</detailedImage>
+    <layout>AP_ChemFuelPowerRoom</layout>
+    <marketvalue>1906</marketvalue>
+    <researchPrerequisites>
+        <li>Electricity</li>
+        <li>ComplexFurniture</li>
+        <li>Batteries</li>
+        <li>SolarPanels</li>
+        <li>BiofuelRefining</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+<AlphaPrefabs.PrefabDef>
+    <defName>AP_MortarRoom</defName>
+    <label>Artillery Battery Complex</label>
+    <shortLabel>Mortar Array</shortLabel>
+    <description>Eight mortar positions with two drop-pod launch pads</description>
+    <priority>1</priority>
+    <category>AP_13_13_Defens</category>
+    <detailedImage>UI/Prefabs_Preview/AP_MortarRoom_Preview</detailedImage>
+    <layout>AP_MortarRoom</layout>
+    <marketvalue>3687</marketvalue>
+    <researchPrerequisites>
+        <li>Stonecutting</li>
+        <li>Electricity</li>
+        <li>Mortars</li>
+        <li>ComplexFurniture</li>
+        <li>TransportPod</li>
+    </researchPrerequisites>
+    <modPrerequisites></modPrerequisites>
+</AlphaPrefabs.PrefabDef>
+  <AlphaPrefabs.PrefabDef>
        <defName>AP_FastSleep4Room</defName>
-       <label>速眠4房间</label>
-       <shortLabel>速眠4房间</shortLabel>
-       <description>有速眠装置的四个双人房间</description>
+       <label>Fast Sleep 4 Room</label>
+       <shortLabel>Fast Sleep 4 Room</shortLabel>
+       <description>Four double rooms with fast sleep devices</description>
        <priority>1</priority>
-       <category>13_13_Dorm</category>
+       <category>AP_13_13_Dorm</category>
        <detailedImage>UI/Prefabs_Preview/AP_FastSleep4Room_Preview</detailedImage>
        <layout>AP_FastSleep4Room</layout>
        <marketvalue>2517</marketvalue>
@@ -654,11 +654,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_5Room_prison</defName>
-       <label>五人监狱</label>
-       <shortLabel>五人监狱</shortLabel>
-       <description>有五个单独房间的监狱和营养机</description>
+       <label>5-Person Prison</label>
+       <shortLabel>5-Person Prison</shortLabel>
+       <description>Prison with five individual cells and nutrient paste dispenser</description>
        <priority>1</priority>
-       <category>13_13_Dorm</category>
+       <category>AP_13_13_Dorm</category>
        <detailedImage>UI/Prefabs_Preview/AP_5Room_prison_Preview</detailedImage>
        <layout>AP_5Room_prison</layout>
        <marketvalue>2207</marketvalue>
@@ -674,11 +674,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_DeepDrillRoom</defName>
-       <label>小型挖矿房</label>
-       <shortLabel>小型挖矿房</shortLabel>
-       <description>有发电机单独供电的挖矿房</description>
+       <label>Compact Mining Room</label>
+       <shortLabel>Compact Mining Room</shortLabel>
+       <description>Mining room with dedicated generator power supply</description>
        <priority>1</priority>
-       <category>13_13_WorkShop</category>
+       <category>AP_13_13_WorkShop</category>
        <detailedImage>UI/Prefabs_Preview/AP_DeepDrillRoom_Preview</detailedImage>
        <layout>AP_DeepDrillRoom</layout>
        <marketvalue>268</marketvalue>
@@ -690,11 +690,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_AirConRoom</defName>
-       <label>温控房间</label>
-       <shortLabel>温控房间</shortLabel>
-       <description>有空调外机和热水器的温控中枢</description>
+       <label>Climate Control Room</label>
+       <shortLabel>Climate Control Room</shortLabel>
+       <description>Thermal regulation hub with AC units and water heater</description>
        <priority>1</priority>
-       <category>13_13_WorkShop</category>
+       <category>AP_13_13_WorkShop</category>
        <detailedImage>UI/Prefabs_Preview/AP_AirConRoom_Preview</detailedImage>
        <layout>AP_AirConRoom</layout>
        <marketvalue>1551</marketvalue>
@@ -707,11 +707,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_4PawnDefensWall</defName>
-       <label>四人防御墙</label>
-       <shortLabel>四人防御墙</shortLabel>
-       <description>可以让四个人在这里进行防御的建筑</description>
+       <label>4-Pawn Defense Wall</label>
+       <shortLabel>4-Pawn Defense Wall</shortLabel>
+       <description>Defensive structure for four pawns</description>
        <priority>1</priority>
-       <category>13_13_Defens</category>
+       <category>AP_13_13_Defens</category>
        <detailedImage>UI/Prefabs_Preview/AP_4PawnDefensWall_Preview</detailedImage>
        <layout>AP_4PawnDefensWall</layout>
        <marketvalue>222</marketvalue>
@@ -723,11 +723,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_BigDenfensPosition</defName>
-       <label>大型防御阵地</label>
-       <shortLabel>大型防御阵地</shortLabel>
-       <description>可以提供20人一起防御的大型阵地，黄色地块为射手，精致砖块为近战，可以EMP穿墙打盾</description>
+       <label>Large Defense Position</label>
+       <shortLabel>Large Defense Position</shortLabel>
+       <description>Massive defensive complex for 20 pawns. Yellow tiles for shooters, refined bricks for melee. Allows EMP wall-piercing shield attacks</description>
        <priority>1</priority>
-       <category>13_13_Defens</category>
+       <category>AP_13_13_Defens</category>
        <detailedImage>UI/Prefabs_Preview/AP_BigDenfensPosition_Preview</detailedImage>
        <layout>AP_BigDenfensPosition</layout>
        <marketvalue>5671</marketvalue>
@@ -742,11 +742,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_MidMachineSentry</defName>
-       <label>中型炮塔阵地</label>
-       <shortLabel>中型炮塔阵地</shortLabel>
-       <description>12个小机枪和四个加农炮的炮塔阵地，提供强大的火力支援，有灭火装置。</description>
+       <label>Medium Turret Array</label>
+       <shortLabel>Medium Turret Array</shortLabel>
+       <description>Defensive position with 12 mini-guns and 4 cannons, includes fire suppression</description>
        <priority>1</priority>
-       <category>13_13_Defens</category>
+       <category>AP_13_13_Defens</category>
        <detailedImage>UI/Prefabs_Preview/AP_MidMachineSentry_Preview</detailedImage>
        <layout>AP_MidMachineSentry</layout>
        <marketvalue>3957</marketvalue>
@@ -762,11 +762,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_LargeMachineSentry</defName>
-       <label>大型炮塔阵地</label>
-       <shortLabel>中型炮塔阵地</shortLabel>
-       <description>12个小机枪和四个加农炮的炮塔阵地，和四个铀炮，提供强劲的火力支援，有灭火装置和毒气地雷。</description>
+       <label>Large Turret Array</label>
+       <shortLabel>Medium Turret Array</shortLabel>
+       <description>Heavy defensive position with 12 mini-guns, 4 cannons, 4 uranium turrets, fire suppression and gas mines</description>
        <priority>1</priority>
-       <category>13_13_Defens</category>
+       <category>AP_13_13_Defens</category>
        <detailedImage>UI/Prefabs_Preview/AP_LargeMachineSentry_Preview</detailedImage>
        <layout>AP_LargeMachineSentry</layout>
        <marketvalue>7762</marketvalue>
@@ -784,11 +784,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_SmallMachineSentry</defName>
-       <label>小型炮塔阵地</label>
-       <shortLabel>小型炮塔阵地</shortLabel>
-       <description>8个小机枪提供火力支援，有灭火装置。</description>
+       <label>Small Turret Array</label>
+       <shortLabel>Small Turret Array</shortLabel>
+       <description>8 mini-guns with fire suppression system</description>
        <priority>1</priority>
-       <category>13_13_Defens</category>
+       <category>AP_13_13_Defens</category>
        <detailedImage>UI/Prefabs_Preview/AP_SmallMachineSentry_Preview</detailedImage>
        <layout>AP_SmallMachineSentry</layout>
        <marketvalue>1180</marketvalue>
@@ -803,11 +803,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_AtomicsDenfensSentry</defName>
-       <label>核能炮塔阵地</label>
-       <shortLabel>核能炮塔阵地</shortLabel>
-       <description>四个光明石碑，四个电磁塔，甚至还有一个护盾装置，提供无与伦比的火力，美中不足的是它需要额外的供电设施。</description>
+       <label>Atomic Turret Array</label>
+       <shortLabel>Atomic Turret Array</shortLabel>
+       <description>Contains 4 Brightstone Monoliths, 4 EM Towers, and shield generator. Requires external power supply</description>
        <priority>1</priority>
-       <category>13_13_Defens</category>
+       <category>AP_13_13_Defens</category>
        <detailedImage>UI/Prefabs_Preview/AP_AtomicsDenfensSentry_Preview</detailedImage>
        <layout>AP_AtomicsDenfensSentry</layout>
        <marketvalue>9607</marketvalue>
@@ -821,11 +821,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_smallAirport</defName>
-       <label>小型机场</label>
-       <shortLabel>小型机场</shortLabel>
-       <description>一个小型的机场可供飞机起降</description>
+       <label>Small Airport</label>
+       <shortLabel>Small Airport</shortLabel>
+       <description>Compact airport for aircraft landing/takeoff</description>
        <priority>1</priority>
-       <category>13_13_StoreRoom</category>
+       <category>AP_13_13_StoreRoom</category>
        <detailedImage>UI/Prefabs_Preview/AP_smallAirport_Preview</detailedImage>
        <layout>AP_smallAirport</layout>
 <marketvalue>1101</marketvalue>
@@ -840,11 +840,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_RoyalPeopelRoom2</defName>
-       <label>双都督贵族房</label>
-       <shortLabel>双都督贵族房</shortLabel>
-       <description>两个可以提供最高都督入住的贵族房间</description>
+       <label>Double Duke Suite</label>
+       <shortLabel>Double Duke Suite</shortLabel>
+       <description>Two luxury rooms for highest-ranking Dukes</description>
        <priority>1</priority>
-       <category>13_13_Dorm</category>
+       <category>AP_13_13_Dorm</category>
        <detailedImage>UI/Prefabs_Preview/AP_RoyalPeopelRoom2_Preview</detailedImage>
        <layout>AP_RoyalPeopelRoom2</layout>
 <marketvalue>3958</marketvalue>
@@ -861,11 +861,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_RoyalMidChurchRoom</defName>
-       <label>都督谒见室</label>
-       <shortLabel>都督谒见室</shortLabel>
-       <description>最高支持都督级别贵族的谒见室</description>
+       <label>Duke Audience Chamber</label>
+       <shortLabel>Duke Audience Chamber</shortLabel>
+       <description>Audience chamber suitable for Duke-level nobility</description>
        <priority>1</priority>
-       <category>13_13_Culture</category>
+       <category>AP_13_13_Culture</category>
        <detailedImage>UI/Prefabs_Preview/AP_RoyalMidChurchRoom_Preview</detailedImage>
        <layout>AP_RoyalMidChurchRoom</layout>
 <marketvalue>8794</marketvalue>
@@ -883,11 +883,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_RoyalLargeNobiiltyRoom</defName>
-       <label>将军休息室</label>
-       <shortLabel>将军休息室</shortLabel>
-       <description>最高支持将军级别的休息室</description>
+       <label>General's Lounge</label>
+       <shortLabel>General's Lounge</shortLabel>
+       <description>Resting chamber suitable for General-level nobility</description>
        <priority>1</priority>
-       <category>13_13_Culture</category>
+       <category>AP_13_13_Culture</category>
        <detailedImage>UI/Prefabs_Preview/AP_RoyalLargeNobiiltyRoom_Preview</detailedImage>
        <layout>AP_RoyalLargeNobiiltyRoom</layout>
 <marketvalue>3227</marketvalue>
@@ -902,11 +902,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_RoyalGeneralChamber</defName>
-       <label>将军谒见室</label>
-       <shortLabel>将军谒见室</shortLabel>
-       <description>最高支持将军级别的将军谒见室，极度奢华，同时可以进行娱乐和吃饭</description>
+       <label>General's Audience Hall</label>
+       <shortLabel>General's Audience Hall</shortLabel>
+       <description>Luxurious audience hall for General-level nobility with dining and entertainment facilities</description>
        <priority>1</priority>
-       <category>13_13_Culture</category>
+       <category>AP_13_13_Culture</category>
        <detailedImage>UI/Prefabs_Preview/AP_RoyalGeneralChamber_Preview</detailedImage>
        <layout>AP_RoyalGeneralChamber</layout>
 <marketvalue>13467</marketvalue>
@@ -922,11 +922,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_RoyalGeneralMusicRoom</defName>
-       <label>将军音乐室</label>
-       <shortLabel>将军音乐室</shortLabel>
-       <description>满足将军级别贵族的音乐室!  这真的值得嘛?由于13*13无法满足需求，所以大小是13*14</description>
+       <label>General's Music Room</label>
+       <shortLabel>General's Music Room</shortLabel>
+       <description>Music room meeting General-level requirements! 13x14 size to accommodate needs</description>
        <priority>1</priority>
-       <category>13_13_Culture</category>
+       <category>AP_13_13_Culture</category>
        <detailedImage>UI/Prefabs_Preview/AP_RoyalGeneralMusicRoom_Preview</detailedImage>
        <layout>AP_RoyalGeneralMusicRoom</layout>
 <marketvalue>8379</marketvalue>
@@ -941,11 +941,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_RoyalGeneralArtRoom</defName>
-       <label>将军艺术室</label>
-       <shortLabel>将军艺术室</shortLabel>
-       <description>满足将军级别贵族的艺术室!</description>
+       <label>General's Art Studio</label>
+       <shortLabel>General's Art Studio</shortLabel>
+       <description>Art studio meeting General-level aristocratic standards</description>
        <priority>1</priority>
-       <category>13_13_Culture</category>
+       <category>AP_13_13_Culture</category>
        <detailedImage>UI/Prefabs_Preview/AP_RoyalGeneralArtRoom_Preview</detailedImage>
        <layout>AP_RoyalGeneralArtRoom</layout>
 <marketvalue>4936</marketvalue>
@@ -960,11 +960,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_RoyalHighStellarch</defName>
-       <label>至高星主建筑群</label>
-       <shortLabel>至高星主建筑群</shortLabel>
-       <description>这就是终极了,连至高星主都能满意的卧室,谒见室,艺术室,舞厅,现在全部一起打包,只是价格有点小贵!</description>
+       <label>Stellarch Complex</label>
+       <shortLabel>Stellarch Complex</shortLabel>
+       <description>Ultimate complex including bedroom, audience hall, art studio, and ballroom - all in one package!</description>
        <priority>1</priority>
-       <category>13_13_Culture</category>
+       <category>AP_13_13_Culture</category>
        <detailedImage>UI/Prefabs_Preview/AP_RoyalHighStellarch_Preview</detailedImage>
        <layout>AP_RoyalHighStellarch</layout>
 <marketvalue>56368</marketvalue>
@@ -981,11 +981,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_ShuiZaiPei</defName>
-       <label>VE水栽培室</label>
-       <shortLabel>VE水栽培室</shortLabel>
-       <description>VE模组下的水栽培室，附带喷灌器</description>
+       <label>VE Hydroponics Room</label>
+       <shortLabel>VE Hydroponics Room</shortLabel>
+       <description>Hydroponics facility with sprinklers (VE mod required)</description>
        <priority>1</priority>
-       <category>13_13_Farm</category>
+       <category>AP_13_13_Farm</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_ShuiZaiPei_Preview</detailedImage>
        <layout>AP_VE_ShuiZaiPei</layout>
 <marketvalue>13712</marketvalue>
@@ -1000,11 +1000,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_YanJiuShi</defName>
-       <label>VE研究室医疗</label>
-       <shortLabel>VE研究室医疗</shortLabel>
-       <description>VE模组下的研究室和医疗室，有两个高级研究台和四个医疗床</description>
+       <label>VE Research and Medical</label>
+       <shortLabel>VE Research and Medical</shortLabel>
+       <description>Research lab and medical bay with 2 advanced research stations and 4 hospital beds</description>
        <priority>1</priority>
-       <category>13_13_Labor</category>
+       <category>AP_13_13_Labor</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_YanJiuShi_Preview</detailedImage>
        <layout>AP_VE_YanJiuShi</layout>
 <marketvalue>6423</marketvalue>
@@ -1026,11 +1026,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_FangWeiTing</defName>
-       <label>VE防卫厅</label>
-       <shortLabel>VE防卫厅</shortLabel>
-       <description>VE模组下防卫厅，提供掩体,耐久度高且防火，可以透过四个方向射击</description>
+       <label>VE Defense Hall</label>
+       <shortLabel>VE Defense Hall</shortLabel>
+       <description>Fireproof defensive structure with firing positions in four directions</description>
        <priority>1</priority>
-       <category>13_13_Defens</category>
+       <category>AP_13_13_Defens</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_FangWeiTing_Preview</detailedImage>
        <layout>AP_VE_FangWeiTing</layout>
 <marketvalue>1247</marketvalue>
@@ -1047,11 +1047,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_ShePinCenter</defName>
-       <label>机械带宽室</label>
-       <shortLabel>机械带宽室</shortLabel>
-       <description>提供16个额外带宽</description>
+       <label>Mechanical Bandwidth Room</label>
+       <shortLabel>Mechanical Bandwidth Room</shortLabel>
+       <description>Provides +16 bandwidth</description>
        <priority>1</priority>
-       <category>13_13_Labor</category>
+       <category>AP_13_13_Labor</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_ShePinCenter_Preview</detailedImage>
        <layout>AP_VE_ShePinCenter</layout>
 <marketvalue>3569</marketvalue>
@@ -1064,11 +1064,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_AirportWithPlane1</defName>
-       <label>货运飞机带停机台</label>
-       <shortLabel>货运飞机带停机台</shortLabel>
-       <description>拥有一个大型货运飞机的停机台</description>
+       <label>Cargo Plane with Platform</label>
+       <shortLabel>Cargo Plane with Platform</shortLabel>
+       <description>Landing platform with large cargo aircraft</description>
        <priority>1</priority>
-       <category>13_13_StoreRoom</category>
+       <category>AP_13_13_StoreRoom</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_AirportWithPlane1_Preview</detailedImage>
        <layout>AP_VE_AirportWithPlane1</layout>
 <marketvalue>5898</marketvalue>
@@ -1084,11 +1084,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_AirportWithPlane2</defName>
-       <label>人员运输机带停机台</label>
-       <shortLabel>人员运输机带停机台</shortLabel>
-       <description>拥有一个人员运输机的停机台</description>
+       <label>Transport Plane with Platform</label>
+       <shortLabel>Transport Plane with Platform</shortLabel>
+       <description>Landing platform with personnel transport aircraft</description>
        <priority>1</priority>
-       <category>13_13_StoreRoom</category>
+       <category>AP_13_13_StoreRoom</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_AirportWithPlane2_Preview</detailedImage>
        <layout>AP_VE_AirportWithPlane2</layout>
 <marketvalue>8557</marketvalue>
@@ -1104,11 +1104,11 @@
    </AlphaPrefabs.PrefabDef>
 <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_AirportWithPlane3</defName>
-       <label>小型运输机带停机台</label>
-       <shortLabel>小型运输机带停机台</shortLabel>
-       <description>拥有一个运输机的停机台</description>
+       <label>Small Transport with Platform</label>
+       <shortLabel>Small Transport with Platform</shortLabel>
+       <description>Landing platform with light transport aircraft</description>
        <priority>1</priority>
-       <category>13_13_StoreRoom</category>
+       <category>AP_13_13_StoreRoom</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_AirportWithPlane3_Preview</detailedImage>
        <layout>AP_VE_AirportWithPlane3</layout>
 <marketvalue>4242</marketvalue>
@@ -1124,11 +1124,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_AirportWithPlane4</defName>
-       <label>大型战斗机带停机台</label>
-       <shortLabel>大型战斗机带停机台</shortLabel>
-       <description>拥有一个大型战斗机机的停机台</description>
+       <label>Fighter Jet Platform</label>
+       <shortLabel>Fighter Jet Platform</shortLabel>
+       <description>Landing platform with heavy fighter jet</description>
        <priority>1</priority>
-       <category>13_13_StoreRoom</category>
+       <category>AP_13_13_StoreRoom</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_AirportWithPlane4_Preview</detailedImage>
        <layout>AP_VE_AirportWithPlane4</layout>
 <marketvalue>13716</marketvalue>
@@ -1144,11 +1144,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_AirportWithPlane5</defName>
-       <label>创世纪飞船带停机台</label>
-       <shortLabel>创世纪飞船带停机台</shortLabel>
-       <description>拥有一个创世纪飞船的停机台</description>
+       <label>Genesis Starship Platform</label>
+       <shortLabel>Genesis Starship Platform</shortLabel>
+       <description>Landing platform with Genesis starship</description>
        <priority>1</priority>
-       <category>13_13_StoreRoom</category>
+       <category>AP_13_13_StoreRoom</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_AirportWithPlane5_Preview</detailedImage>
        <layout>AP_VE_AirportWithPlane5</layout>
 <marketvalue>53553</marketvalue>
@@ -1164,11 +1164,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_VE_PowerRoom</defName>
-       <label>VE太阳能源室</label>
-       <shortLabel>VE太阳能源室</shortLabel>
-       <description>有三个高级太阳能发电的能源室</description>
+       <label>VE Solar Power Room</label>
+       <shortLabel>VE Solar Power Room</shortLabel>
+       <description>Power room with three advanced solar generators</description>
        <priority>1</priority>
-       <category>13_13_Power</category>
+       <category>AP_13_13_Power</category>
        <detailedImage>UI/Prefabs_Preview/AP_VE_PowerRoom_Preview</detailedImage>
        <layout>AP_VE_PowerRoom</layout>
 <marketvalue>3169</marketvalue>
@@ -1183,11 +1183,11 @@
    </AlphaPrefabs.PrefabDef>
    <AlphaPrefabs.PrefabDef>
        <defName>AP_AnomalEntityRoomType4</defName>
-       <label>异常实体房间4*2</label>
-       <shortLabel>异常实体房间4*2</shortLabel>
-       <description>异常实体房间4单间每个单间可以收容两个实体，有效避免群体出逃</description>
+       <label>Anomaly Containment 4x2</label>
+       <shortLabel>Anomaly Containment 4x2</shortLabel>
+       <description>4 containment units for anomalies, each holding 2 entities. Prevents mass escapes</description>
        <priority>1</priority>
-       <category>13_13_Anomal</category>
+       <category>AP_13_13_Anomal</category>
        <detailedImage>UI/Prefabs_Preview/AP_AnomalEntityRoomType4_Preview</detailedImage>
        <layout>AP_AnomalEntityRoomType4</layout>
 <marketvalue>2025</marketvalue>

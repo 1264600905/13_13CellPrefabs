@@ -1,97 +1,97 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Dorm</defName>
-       <label>宿舍</label>
-       <description>宿舍的描述</description>
+       <defName>AP_13_13_Dorm</defName>
+       <label>Dormitory</label>
+       <description>Facilities for colonists to rest and sleep.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Dorm</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Labor</defName>
-       <label>实验室</label>
-       <description>实验室的描述</description>
+       <defName>AP_13_13_Labor</defName>
+       <label>Laboratory</label>
+       <description>Facilities dedicated to research and scientific experiments.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Labor</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Power</defName>
-       <label>能源设施</label>
-       <description>能源设施的描述</description>
+       <defName>AP_13_13_Power</defName>
+       <label>Power Facilities</label>
+       <description>Structures related to power generation and distribution.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Power</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_WorkShop</defName>
-       <label>工作车间</label>
-       <description>工作车间的描述</description>
+       <defName>AP_13_13_WorkShop</defName>
+       <label>Workshop</label>
+       <description>Workspaces for crafting and manufacturing goods.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/WorkShop</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_StoreRoom</defName>
-       <label>仓库</label>
-       <description>仓库的描述</description>
+       <defName>AP_13_13_StoreRoom</defName>
+       <label>Storage</label>
+       <description>Facilities for storing items and resources.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/StoreRoom</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Farm</defName>
-       <label>农场</label>
-       <description>农场的描述</description>
+       <defName>AP_13_13_Farm</defName>
+       <label>Farm</label>
+       <description>Agricultural areas for growing crops and raising animals.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Farm</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Culture</defName>
-       <label>文化设施</label>
-       <description>文化设施的描述</description>
+       <defName>AP_13_13_Culture</defName>
+       <label>Recreation</label>
+       <description>Buildings for leisure and cultural activities.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Culture</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Anomal</defName>
-       <label>异常</label>
-       <description>异常的描述</description>
+       <defName>AP_13_13_Anomal</defName>
+       <label>Anomaly</label>
+       <description>Mysterious and unexplained phenomena or structures.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Anomal</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Defens</defName>
-       <label>防御</label>
-       <description>防御的描述</description>
+       <defName>AP_13_13_Defens</defName>
+       <label>Defense</label>
+       <description>Structures designed for base protection and combat.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Defens</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Atomics</defName>
-       <label>核能</label>
-       <description>核能的描述</description>
+       <defName>AP_13_13_Atomics</defName>
+       <label>Atomics</label>
+       <description>Advanced nuclear energy systems and reactors.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Atomics</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Bath</defName>
-       <label>浴室</label>
-       <description>浴室的描述</description>
+       <defName>AP_13_13_Bath</defName>
+       <label>Bathhouse</label>
+       <description>Hygiene facilities for colonists' cleanliness.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Bath</icon>
        <modPrerequisites></modPrerequisites>
    </AlphaPrefabs.PrefabCategoryDef>
    <AlphaPrefabs.PrefabCategoryDef>
-       <defName>13_13_Oil</defName>
-       <label>石油</label>
-       <description>石油的描述</description>
+       <defName>AP_13_13_Oil</defName>
+       <label>Oil Industry</label>
+       <description>Infrastructure for oil extraction and processing.</description>
        <priority>0.1</priority>
        <icon>UI/Categories/Oil</icon>
        <modPrerequisites></modPrerequisites>

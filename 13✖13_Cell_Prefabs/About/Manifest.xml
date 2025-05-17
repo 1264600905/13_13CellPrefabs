@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
   <identifier>trigger.cellprefabs</identifier>
-  <version>1.0.2.0</version>
+  <version>1.1.0.0</version>
   <targetVersions>    
   </targetVersions>
   <dependencies>
@@ -10,9 +10,16 @@
   </incompatibleWith>
   <loadBefore>	  
   </loadBefore>
-  <loadAfter>	
+  <loadAfter>
+   <li>sarg.alphaprefabs</li>	
   </loadAfter>
-  <manifestUri></manifestUri>
-  <downloadUri></downloadUri>
+ <manifestUri>steam://url/CommunityFilePage/3482235159</manifestUri> <!-- 深层链接协议 -->
+  <downloadUri>https://steamcommunity.com/sharedfiles/filedetails/?id=3482235159</downloadUri>
+  <!-- 必须存在的标签 -->
+<supportedLanguages>
+  <li>ChineseSimplified</li>
+  <li>ChineseTraditional</li>  <!-- 确保此行存在 -->
+  <li>English</li>
+</supportedLanguages>
 </Manifest>
 

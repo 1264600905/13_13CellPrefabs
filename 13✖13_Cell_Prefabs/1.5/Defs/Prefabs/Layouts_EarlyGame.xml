@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
 <KCSG.StructureLayoutDef>
-  <defName>AP_13_13_BeginHouse1</defName>
+  <defName>AP_AP_13_13_BeginHouse1</defName>
   <spawnConduits>false</spawnConduits>
   <layouts>
     <li>
@@ -67,7 +67,7 @@
   </terrainGrid>
 </KCSG.StructureLayoutDef>
 <KCSG.StructureLayoutDef>
-  <defName>AP_13_13_BeginHouse2</defName>
+  <defName>AP_AP_13_13_BeginHouse2</defName>
   <spawnConduits>false</spawnConduits>
   <layouts>
     <li>
@@ -136,7 +136,7 @@
   </modRequirements>
 </KCSG.StructureLayoutDef>
 <KCSG.StructureLayoutDef>
-  <defName>AP_13_13_BeginHouse3</defName>
+  <defName>AP_AP_13_13_BeginHouse3</defName>
   <spawnConduits>false</spawnConduits>
   <layouts>
     <li>
@@ -3982,65 +3982,65 @@
   <defName>AP_AnomalEntityRoomType4</defName>
   <layouts>
     <li>
-      <li>Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,SecurityDoor_North,.,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,BioferriteHarvester_North,.,.,.,Wall_Bioferrite,HiddenConduit,.,.,StandingLamp,BioferriteHarvester_East,.,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,.,.,HoldingPlatform,.,Wall_Bioferrite,.,.,.,.,.,.,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,StandingLamp,.,.,.,Wall_Bioferrite,.,HoldingPlatform,.,.,HoldingPlatform,.,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,.,.,.,.,Wall_Bioferrite,.,.,.,.,.,.,Wall_Bioferrite</li>
-      <li>.,.,.,HoldingPlatform,.,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,.</li>
-      <li>SecurityDoor_East,HiddenConduit,.,.,.,Wall_Bioferrite,ShardInhibitor,HiddenConduit,.,.,.,HiddenConduit,SecurityDoor_East</li>
-      <li>Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,.,HoldingPlatform,.,.,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,.,.,.,.,.,.,Wall_Bioferrite,.,.,.,.,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,.,HoldingPlatform,.,.,HoldingPlatform,.,Wall_Bioferrite,.,.,.,StandingLamp,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,.,.,.,.,.,.,Wall_Bioferrite,.,HoldingPlatform,.,.,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,.,BioferriteHarvester_West,StandingLamp,.,.,HiddenConduit,Wall_Bioferrite,.,.,.,BioferriteHarvester_South,Wall_Bioferrite</li>
-      <li>Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,SecurityDoor_North,.,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,HiddenConduit,HiddenConduit,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,BioferriteHarvester_North,.,.,.,Wall_Bioferrite,HiddenConduit,.,.,StandingLamp_Scavenger,BioferriteHarvester_East,.,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,.,.,HoldingPlatform,.,Wall_Bioferrite,HiddenConduit,.,.,.,.,.,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,StandingLamp_Scavenger,.,.,.,Wall_Bioferrite,HiddenConduit,HoldingPlatform,.,.,HoldingPlatform,.,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,.,.,.,.,Wall_Bioferrite,HiddenConduit,.,.,.,.,.,Wall_Bioferrite</li>
+      <li>HiddenConduit,.,.,HoldingPlatform,.,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite</li>
+      <li>HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,Wall_Bioferrite,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit</li>
+      <li>Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,.,HoldingPlatform,.,.,HiddenConduit</li>
+      <li>Wall_Bioferrite,.,.,.,.,.,HiddenConduit,Wall_Bioferrite,.,.,.,.,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,.,HoldingPlatform,.,.,HoldingPlatform,HiddenConduit,Wall_Bioferrite,.,.,.,StandingLamp_Scavenger,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,.,.,.,.,.,HiddenConduit,Wall_Bioferrite,.,HoldingPlatform,.,.,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,.,BioferriteHarvester_West,StandingLamp_Scavenger,.,.,HiddenConduit,Wall_Bioferrite,.,.,.,BioferriteHarvester_South,Wall_Bioferrite</li>
+      <li>Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,HiddenConduit,HiddenConduit,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite,Wall_Bioferrite</li>
     </li>
     <li>
-      <li>HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit</li>
+      <li>HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,.,SecurityDoor_South,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit</li>
       <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,.,HiddenConduit,HiddenConduit,HiddenConduit,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
       <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
-      <li>HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit</li>
+      <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
+      <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
+      <li>SecurityDoor_West,.,.,.,.,.,HiddenConduit,.,.,.,.,.,HiddenConduit</li>
+      <li>.,.,.,.,.,HiddenConduit,.,.,.,.,.,.,.</li>
+      <li>HiddenConduit,.,.,.,.,.,HiddenConduit,.,.,.,.,.,SecurityDoor_East</li>
+      <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
+      <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
+      <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
+      <li>HiddenConduit,.,.,.,.,.,.,.,.,.,.,.,HiddenConduit</li>
+      <li>HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,SecurityDoor_North,.,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit,HiddenConduit</li>
     </li>
   </layouts>
   <roofGrid>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
-    <li>1,1,1,1,1,1,1,1,1,1,1,1,1</li>
+    <li>1,1,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>1,1,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
+    <li>.,.,.,.,.,.,.,.,.,.,.,.,.</li>
   </roofGrid>
   <terrainGrid>
-    <li>Soil,Soil,Soil,Soil,Soil,Soil,Soil,Soil,Soil,Soil,Soil,Soil,Soil</li>
-    <li>Soil,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,Soil</li>
-    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,Soil</li>
-    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,FlagstoneLimestone</li>
-    <li>Soil,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,FlagstoneLimestone</li>
-    <li>Soil,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,FlagstoneLimestone</li>
-    <li>Soil,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,FlagstoneLimestone</li>
-    <li>Soil,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,FlagstoneLimestone</li>
-    <li>Soil,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
-    <li>Soil,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
-    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,Soil</li>
-    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,Gravel</li>
-    <li>FlagstoneLimestone,FlagstoneLimestone,FlagstoneLimestone,FlagstoneLimestone,FlagstoneLimestone,FlagstoneLimestone,FlagstoneLimestone,Soil,Soil,Soil,Soil,Soil,Gravel</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
+    <li>BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate,BioferritePlate</li>
   </terrainGrid>
   <modRequirements>
     <li>ludeon.rimworld.anomaly</li>
