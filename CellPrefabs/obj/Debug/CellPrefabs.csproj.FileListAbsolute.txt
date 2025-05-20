@@ -1,0 +1,8 @@
+D:\RimworldProject\CellPrefabs\obj\Debug\CellPrefabs.csproj.AssemblyReference.cache
+D:\RimworldProject\CellPrefabs\obj\Debug\CellPrefabs.csproj.CoreCompileInputs.cache
+D:\RimworldProject\CellPrefabs\bin\Debug\CellPrefabs.dll
+D:\RimworldProject\CellPrefabs\bin\Debug\CellPrefabs.pdb
+D:\RimworldProject\CellPrefabs\obj\Debug\CellPrefabs.dll
+D:\RimworldProject\CellPrefabs\obj\Debug\CellPrefabs.pdb
+H:\SteamLibrary\steamapps\common\RimWorld\Mods\testMod\Assemblies\CellPrefabs.dll
+H:\SteamLibrary\steamapps\common\RimWorld\Mods\testMod\Assemblies\CellPrefabs.pdb
