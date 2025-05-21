@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>ManualTradeBeacon</defName>
+    <label>primitive trade beacon</label>
+    <description>Primitive trade beacon without electricity.</description>
+
+    <thingClass>Building_OrbitalTradeBeacon</thingClass>
+    <category>Building</category>
+
+    <graphicData>
+      <texPath>Things/Building/Special/ManualTradeBeacon</texPath> <!-- 确保图像存在 -->
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1.2</drawSize>
+    </graphicData>
+
+    <altitudeLayer>Building</altitudeLayer>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
+    <rotatable>false</rotatable>
+
+    <statBases>
+      <MaxHitPoints>150</MaxHitPoints>
+      <WorkToBuild>300</WorkToBuild>
+      <Flammability>0.3</Flammability>
+    </statBases>
+
+    <costList>
+      <Steel>50</Steel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+
+    <terrainAffordanceNeeded>Heavy</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+
+    <building>
+      <destroySound>BuildingDestroyed_Metal_Small</destroySound>
+    </building>
+
+    <!-- 没有 power 组件就不会消耗电力 -->
+    <comps>
+      <li Class="CompProperties_Flickable"/> <!-- 可选 -->
+    </comps>
+
+    <placeWorkers>
+      <li>PlaceWorker_ShowTradeBeaconRadius</li>
+    </placeWorkers>
+
+    <!-- 移除科技需求 -->
+    <researchPrerequisites RemoveAll="true"/>
+
+    <tradeTags>
+      <li>Standard</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

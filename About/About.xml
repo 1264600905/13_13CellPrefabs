@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>13✖13 Cell Prefabs 预制房间</name>
+    <author>trigger</author>
+    <url></url>
+    <supportedVersions><li>1.5</li></supportedVersions>
+    <packageId>trigger.cellprefabs</packageId>
+	<modDependencies>
+		<li>
+			<packageId>Sarg.AlphaPrefabs</packageId>
+			<displayName>Alpha Prefabs</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3070780021</steamWorkshopUrl>
+			<downloadUrl></downloadUrl>
+		</li>
+	</modDependencies>
+  <loadBefore />   
+  <loadAfter>	
+  <li>Sarg.AlphaPrefabs</li>
+  </loadAfter>
+<modIconPath IgnoreIfNoMatchingField="True">13_13_Cell_Prefabs_Logo</modIconPath>
+  	<description>
+	
+需要Alpha Prefabs
+https://steamcommunity.com/sharedfiles/filedetails/?id=3070780021
+
+13✖13 预制房间，原版阿尔法预制体很多不规则建筑，导致实用性很差，全新的13✖13 预制房间所有房间都是严格的正方形！
+修改了原有的建筑科技限制，落地即可购买预制房间，同时针对异常，机械师，部落，三人迫降开局，定制了开局小屋，落地即可使用。
+
+1.2.0重大更新！现在可以导出你的建筑直接做成游戏Mod，详情见开发者工具.
+
+更多建筑在游戏里探索吧！
+
+一共添加了85个方形预制房间。
+
+支持MOD
+Dubs Rimatomics 边缘核能
+Rimefeller 边缘石化
+Dubs Bad Hygiene 边缘卫生
+Vanilla Factions Expanded - Empire VE帝国扩展
+Vanilla Furniture Expanded VE家具扩展
+SRTS Expanded SRTS飞船
+Gloomy Furniture Fix 复古家具
+Fortifications - Industrial
+Fortification Industrial - Citadel 城塞
+MoeLotl Race 萌萌螈
+[sbz] Neat Storage 存储
+
+中文的使用指南 https://api.xiaoheihe.cn/v3/bbs/app/api/web/share?link_id=8c33704e2557
+建筑导出工具指南  https://www.xiaoheihe.cn/app/bbs/link/154921438
+第一弹的布局图 https://api.xiaoheihe.cn/v3/bbs/app/api/web/share?link_id=4391704e308a
+
+部分设计来自B站up主 爱盘点的阿松 感谢up主的分享
+围观视频：https://www.bilibili.com/video/BV1sb421b7EW
+
+
+支持简体中文，繁体中文和英语.
+
+
+Alpha Prefabs Needed
+https://steamcommunity.com/sharedfiles/filedetails/?id=3070780021
+
+13x13 Prefab Rooms. Vanilla Alpha prefabs feature many irregular structures that result in poor functionality. Our completely new 13x13 prefab system ensures all rooms maintain strict square layouts!
+
+Removed original construction tech requirements - prefab rooms become available immediately upon landing. Custom starting cabins are specifically designed for Anomaly, Mechanitor, Tribal, and Three-person Crashlanded scenarios, ready for instant deployment.
+
+Discover more optimized structures through gameplay exploration! Add new 85 buildings!
+
+1.2.0 Major Update! You can now export your buildings and directly turn them into game mods. For details, see the developer tools.
+
+Supports Simplified Chinese, Traditional Chinese, and English.
+
+Supported MODs:
+
+Dubs Rimatomics
+Rimefeller
+Dubs Bad Hygiene
+Vanilla Factions Expanded - Empire
+Vanilla Furniture Expanded
+SRTS Expanded
+Gloomy Furniture Fix
+Fortifications - Industrial
+MoeLotl Race
+[sbz] Neat Storage
+
+更新日志：
+1.0.0 2025-5-16 首次上传mod
+1.0.1 2025-5-16 修正了XML导致红字的问题，删除了一个不兼容建筑，添加了4个预制房间
+1.0.2 2025-5-16 改用8深度的PNG图片，优化了包体大小.
+1.1.0 2025-5-17 加入翻译文件,修改了Mod预览图
+1.1.1 2025-5-18 增加了建筑数量，从67个增加到85个
+1.2.0 2025-5-21 增加一个开发者模式下的建筑导出工具
+
+</description>
+</ModMetaData>

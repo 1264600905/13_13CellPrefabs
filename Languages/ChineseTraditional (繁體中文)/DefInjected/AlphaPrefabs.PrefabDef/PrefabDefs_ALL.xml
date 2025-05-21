@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+<AP_16PawnBarrackRoom.label>16人集體宿舍</AP_16PawnBarrackRoom.label>
+
+<!-- EN: 有16个床位的集体宿舍 -->
+<AP_16PawnBarrackRoom.description>有16個床位的集體宿舍</AP_16PawnBarrackRoom.description>
+
+<!-- EN: 4人宿舍 -->
+<AP_4PawnBarrackRoom.label>4人宿舍</AP_4PawnBarrackRoom.label>
+
+<!-- EN: 有4个双人床位的宿舍 -->
+<AP_4PawnBarrackRoom.description>有4個雙人床位的宿舍</AP_4PawnBarrackRoom.description>
+
+<!-- EN: 四人防御墙 -->
+<AP_4PawnDefensWall.label>四人防禦牆</AP_4PawnDefensWall.label>
+
+<!-- EN: 可以让四个人在这里进行防御的建筑 -->
+<AP_4PawnDefensWall.description>可以讓四個人在這裡進行防禦的建築</AP_4PawnDefensWall.description>
+
+<!-- EN: 五人监狱 -->
+<AP_5Room_prison.label>五人監獄</AP_5Room_prison.label>
+
+<!-- EN: 有五个单独房间的监狱和营养机 -->
+<AP_5Room_prison.description>有五個單獨房間的監獄和營養機</AP_5Room_prison.description>
+
+<!-- EN: 异常收容房7个 -->
+<AP_7Count_ContainmentCellRoom.label>異常收容房7個</AP_7Count_ContainmentCellRoom.label>
+
+<!-- EN: 根据不同威胁分级，最多收容七个异常 -->
+<AP_7Count_ContainmentCellRoom.description>根據不同威脅分級，最多收容七個異常</AP_7Count_ContainmentCellRoom.description>
+
+<!-- EN: 异常收容8房间 -->
+<AP_8Room_AnomalyContainment.label>異常收容8房間</AP_8Room_AnomalyContainment.label>
+
+<!-- EN: 有8个独立房间的异常收容房，防止群体越狱 -->
+<AP_8Room_AnomalyContainment.description>有8個獨立房間的異常收容房，防止群體越獄</AP_8Room_AnomalyContainment.description>
+
+<!-- EN: 温控房间 -->
+<AP_AirConRoom.label>溫控房間</AP_AirConRoom.label>
+
+<!-- EN: 有空调外机和热水器的温控中枢 -->
+<AP_AirConRoom.description>有空調外機和熱水器的溫控中樞</AP_AirConRoom.description>
+
+<!-- EN: 异常实体房间4*2 -->
+<AP_AnomalEntityRoomType4.label>異常實體房間4*2</AP_AnomalEntityRoomType4.label>
+
+<!-- EN: 异常实体房间4单间每个单间可以收容两个实体，有效避免群体出逃 -->
+<AP_AnomalEntityRoomType4.description>異常實體房間4單間，每個單間可以收容兩個實體，有效避免群體出逃</AP_AnomalEntityRoomType4.description>
+
+<!-- EN: 8容纳异常房 -->
+<AP_Anomaly8Room.label>8容納異常房</AP_Anomaly8Room.label>
+
+<!-- EN: 可以同时收容8个异常的收容房间 -->
+<AP_Anomaly8Room.description>可以同時收容8個異常的收容房間</AP_Anomaly8Room.description>
+
+<!-- EN: 异常工作坊 -->
+<AP_AnomalyWorkshop.label>異常工作坊</AP_AnomalyWorkshop.label>
+
+<!-- EN: 带有异常和生物科技的工作坊 -->
+<AP_AnomalyWorkshop.description>帶有異常和生物科技的工作坊</AP_AnomalyWorkshop.description>
+
+<!-- EN: 初始房间1 -->
+<AP_AP_13_13_BeginHouse1.label>初始房間1</AP_AP_13_13_BeginHouse1.label>
+
+<!-- EN: 一个开局就能用的 13*13 小房间附带冷库和监狱 -->
+<AP_AP_13_13_BeginHouse1.description>一個開局就能用的13*13小房間附帶冷庫和監獄</AP_AP_13_13_BeginHouse1.description>
+
+<!-- EN: 初始房间2 -->
+<AP_AP_13_13_BeginHouse2.label>初始房間2</AP_AP_13_13_BeginHouse2.label>
+
+<!-- EN: 一个开局就能用的 13*13 小房间附带冷库，营养膏机和机械培育器 -->
+<AP_AP_13_13_BeginHouse2.description>一個開局就能用的13*13小房間附帶冷庫、營養膏機和機械培育器</AP_AP_13_13_BeginHouse2.description>
+
+<!-- EN: 初始房间3 -->
+<AP_AP_13_13_BeginHouse3.label>初始房間3</AP_AP_13_13_BeginHouse3.label>
+
+<!-- EN: 一个开局就能用的 13*13 小房间附带冷库，异常收容房间 -->
+<AP_AP_13_13_BeginHouse3.description>一個開局就能用的13*13小房間附帶冷庫和異常收容房間</AP_AP_13_13_BeginHouse3.description>
+
+<!-- EN: 核能炮塔阵地 -->
+<AP_AtomicsDenfensSentry.label>核能砲塔陣地</AP_AtomicsDenfensSentry.label>
+
+<!-- EN: 四个光明石碑，四个电磁塔，甚至还有一个护盾装置，提供无与伦比的火力，美中不足的是它需要额外的供电设施。 -->
+<AP_AtomicsDenfensSentry.description>四個光明石碑、四個電磁塔，甚至還有一個護盾裝置，提供無與倫比的火力，美中不足的是它需要額外的供電設施。</AP_AtomicsDenfensSentry.description>
+
+<!-- EN: 核能高能电池房 -->
+<AP_AtomicsHighEnergyBatteryRoom.label>核能高能電池房</AP_AtomicsHighEnergyBatteryRoom.label>
+
+<!-- EN: 12个高能电池的房间，再也不怕没电了 -->
+<AP_AtomicsHighEnergyBatteryRoom.description>12個高能電池的房間，再也不怕沒電了</AP_AtomicsHighEnergyBatteryRoom.description>
+
+<!-- EN: 核电站第一部分 -->
+<AP_AtomicsPowerRoomPart1.label>核電站第一部分</AP_AtomicsPowerRoomPart1.label>
+
+<!-- EN: 带有核电的第一部分，效率只能拉到30%，可以和第二部分一起提升效率 -->
+<AP_AtomicsPowerRoomPart1.description>帶有核電的第一部分，效率只能拉到30%，可以和第二部分一起提升效率</AP_AtomicsPowerRoomPart1.description>
+
+<!-- EN: 核电站第二部分 -->
+<AP_AtomicsPowerRoomPart2.label>核電站第二部分</AP_AtomicsPowerRoomPart2.label>
+
+<!-- EN: 带有核电的第二部分，干冷式冷却塔，可以提升第一部分效率 -->
+<AP_AtomicsPowerRoomPart2.description>帶有核電的第二部分，乾冷式冷卻塔，可以提升第一部分效率</AP_AtomicsPowerRoomPart2.description>
+
+<!-- EN: 核能科研房 -->
+<AP_AtomicsResearchRoom.label>核能科研房</AP_AtomicsResearchRoom.label>
+
+<!-- EN: 科研核能科技，并且可以存储铀棒 -->
+<AP_AtomicsResearchRoom.description>科研核能科技，並且可以儲存鈾棒</AP_AtomicsResearchRoom.description>
+
+<!-- EN: 育儿室 -->
+<AP_BabyPlayRoom.label>育兒室</AP_BabyPlayRoom.label>
+
+<!-- EN: 有教室和育儿室的房间 -->
+<AP_BabyPlayRoom.description>有教室和育兒室的房間</AP_BabyPlayRoom.description>
+
+<!-- EN: 水栽培室 -->
+<AP_BasinRoom.label>水栽培室</AP_BasinRoom.label>
+
+<!-- EN: 水栽培室附带一些酿酒桶 -->
+<AP_BasinRoom.description>水栽培室附帶一些釀酒桶</AP_BasinRoom.description>
+
+<!-- EN: 浴室 -->
+<AP_BathRoom.label>浴室</AP_BathRoom.label>
+
+<!-- EN: 两个厕所和浴室，一个桑拿房和储水装置 -->
+<AP_BathRoom.description>兩個廁所和浴室，一個桑拿房和儲水裝置</AP_BathRoom.description>
+
+<!-- EN: 最佳工坊 -->
+<AP_BestWorkshop.label>最佳工坊</AP_BestWorkshop.label>
+
+<!-- EN: 拥有全部工作台的完美工坊，附带一些置物架 -->
+<AP_BestWorkshop.description>擁有全部工作台的完美工坊，附帶一些置物架</AP_BestWorkshop.description>
+
+<!-- EN: 大型防御阵地 -->
+<AP_BigDenfensPosition.label>大型防禦陣地</AP_BigDenfensPosition.label>
+
+<!-- EN: 可以提供20人一起防御的大型阵地，黄色地块为射手，精致砖块为近战，可以EMP穿墙打盾 -->
+<AP_BigDenfensPosition.description>可以提供20人一起防禦的大型陣地，黃色地塊為射手，精緻磚塊為近戰，可以EMP穿牆打盾</AP_BigDenfensPosition.description>
+
+<!-- EN: 大型机械培育房 -->
+<AP_BigMechLabor.label>大型機械培育房</AP_BigMechLabor.label>
+
+<!-- EN: 有全部机械族科技的机械培育房间 -->
+<AP_BigMechLabor.description>有全部機械族科技的機械培育房間</AP_BigMechLabor.description>
+
+<!-- EN: 大型科研室 -->
+<AP_BigResearchRoom.label>大型科研室</AP_BigResearchRoom.label>
+
+<!-- EN: 拥有三个高级研究台的大型科研室，附带一个远距离扫描 -->
+<AP_BigResearchRoom.description>擁有三個高級研究台的大型科研室，附帶一個遠距離掃描</AP_BigResearchRoom.description>
+
+<!-- EN: 大型仓库 -->
+<AP_BigStoreRoom.label>大型倉庫</AP_BigStoreRoom.label>
+
+<!-- EN: 有40个物品架的大型仓库 -->
+<AP_BigStoreRoom.description>有40個物品架的大型倉庫</AP_BigStoreRoom.description>
+
+<!-- EN: 仪式房和牧场 -->
+<AP_ChamberAndRangelandRoom.label>儀式房和牧場</AP_ChamberAndRangelandRoom.label>
+
+<!-- EN: 一个仪式房和小型牧场 -->
+<AP_ChamberAndRangelandRoom.description>一個儀式房和小型牧場</AP_ChamberAndRangelandRoom.description>
+
+<!-- EN: 燃料发电房 -->
+<AP_ChemFuelPowerRoom.label>燃料發電房</AP_ChemFuelPowerRoom.label>
+
+<!-- EN: 8个燃料发电机和2个太阳能发电机房间 -->
+<AP_ChemFuelPowerRoom.description>8個燃料發電機和2個太陽能發電機房間</AP_ChemFuelPowerRoom.description>
+
+<!-- EN: 死眠室和储存室内 -->
+<AP_DeathRestAndStoreRoom.label>死眠室和儲存室內</AP_DeathRestAndStoreRoom.label>
+
+<!-- EN: 两个顶级死眠室和大型冷库 -->
+<AP_DeathRestAndStoreRoom.description>兩個頂級死眠室和大型冷庫</AP_DeathRestAndStoreRoom.description>
+
+<!-- EN: 小型挖矿房 -->
+<AP_DeepDrillRoom.label>小型挖礦房</AP_DeepDrillRoom.label>
+
+<!-- EN: 有发电机单独供电的挖矿房 -->
+<AP_DeepDrillRoom.description>有發電機單獨供電的挖礦房</AP_DeepDrillRoom.description>
+
+<!-- EN: 防御小屋 -->
+<AP_DefensRoom1.label>防禦小屋</AP_DefensRoom1.label>
+
+<!-- EN: 限流防御小屋，带三个迫击炮 -->
+<AP_DefensRoom1.description>限流防禦小屋，帶三個迫擊砲</AP_DefensRoom1.description>
+
+<!-- EN: 速眠4房间 -->
+<AP_FastSleep4Room.label>速眠4房間</AP_FastSleep4Room.label>
+
+<!-- EN: 有速眠装置的四个双人房间 -->
+<AP_FastSleep4Room.description>有速眠裝置的四個雙人房間</AP_FastSleep4Room.description>
+
+<!-- EN: 基因室 -->
+<AP_GeneLabor.label>基因室</AP_GeneLabor.label>
+
+<!-- EN: 最高支持78复杂度的基因室 -->
+<AP_GeneLabor.description>最高支援78複雜度的基因室</AP_GeneLabor.description>
+
+<!-- EN: 大型炮塔阵地 -->
+<AP_LargeMachineSentry.label>大型砲塔陣地</AP_LargeMachineSentry.label>
+
+<!-- EN: 12个小机枪和四个加农炮的炮塔阵地，和四个铀炮，提供强劲的火力支援，有灭火装置和毒气地雷。 -->
+<AP_LargeMachineSentry.description>12個小機槍和四個加農砲的砲塔陣地，和四個鈾砲，提供強勁的火力支援，有滅火裝置和毒氣地雷。</AP_LargeMachineSentry.description>
+
+<!-- EN: 中型炮塔阵地 -->
+<AP_MidMachineSentry.label>中型砲塔陣地</AP_MidMachineSentry.label>
+
+<!-- EN: 12个小机枪和四个加农炮的炮塔阵地，提供强大的火力支援，有灭火装置。 -->
+<AP_MidMachineSentry.description>12個小機槍和四個加農砲的砲塔陣地，提供強大的火力支援，有滅火裝置。</AP_MidMachineSentry.description>
+
+<!-- EN: 迫击炮房间 -->
+<AP_MortarRoom.label>迫擊砲房間</AP_MortarRoom.label>
+
+<!-- EN: 8个迫击炮房间和两组空投仓的房间 -->
+<AP_MortarRoom.description>8個迫擊砲房間和兩組空投倉的房間</AP_MortarRoom.description>
+
+<!-- EN: 超频房间 -->
+<AP_NeuralRoom.label>超頻房間</AP_NeuralRoom.label>
+
+<!-- EN: 科技文化超频房间，提供8个小人的生体递归和神经超频装置 -->
+<AP_NeuralRoom.description>科技文化超頻房間，提供8個小人的生體遞歸和神經超頻裝置</AP_NeuralRoom.description>
+
+<!-- EN: 科研和医疗房间 -->
+<AP_ResearchAndMedicalRoom.label>科研和醫療房間</AP_ResearchAndMedicalRoom.label>
+
+<!-- EN: 双高级科研台和8个医疗床位，并且配备水栽培提供医药 -->
+<AP_ResearchAndMedicalRoom.description>雙高級科研台和8個醫療床位，並且配備水栽培提供醫藥</AP_ResearchAndMedicalRoom.description>
+
+<!-- EN: 石化发电室 -->
+<AP_RimefellerPowerRoom.label>石化發電室</AP_RimefellerPowerRoom.label>
+
+<!-- EN: 边缘石化的发电室，配有6个16000w的石化发电机 -->
+<AP_RimefellerPowerRoom.description>邊緣石化的發電室，配有6個16000w的石化發電機</AP_RimefellerPowerRoom.description>
+
+<!-- EN: 贵族房间和监狱 -->
+<AP_RoyalBedRoomAndPrison.label>貴族房間和監獄</AP_RoyalBedRoomAndPrison.label>
+
+<!-- EN: 两个贵族房间,最高支持总督和8人监狱 -->
+<AP_RoyalBedRoomAndPrison.description>兩個貴族房間，最高支援總督和8人監獄</AP_RoyalBedRoomAndPrison.description>
+
+<!-- EN: 将军艺术室 -->
+<AP_RoyalGeneralArtRoom.label>將軍藝術室</AP_RoyalGeneralArtRoom.label>
+
+<!-- EN: 满足将军级别贵族的艺术室! -->
+<AP_RoyalGeneralArtRoom.description>滿足將軍級別貴族的藝術室！</AP_RoyalGeneralArtRoom.description>
+
+<!-- EN: 将军谒见室 -->
+<AP_RoyalGeneralChamber.label>將軍謁見室</AP_RoyalGeneralChamber.label>
+
+<!-- EN: 最高支持将军级别的将军谒见室，极度奢华，同时可以进行娱乐和吃饭 -->
+<AP_RoyalGeneralChamber.description>最高支援將軍級別的將軍謁見室，極度奢華，同時可以進行娛樂和吃飯</AP_RoyalGeneralChamber.description>
+
+<!-- EN: 将军音乐室 -->
+<AP_RoyalGeneralMusicRoom.label>將軍音樂室</AP_RoyalGeneralMusicRoom.label>
+
+<!-- EN: 满足将军级别贵族的音乐室! 这真的值得嘛?由于13*13无法满足需求，所以大小是13*14 -->
+<AP_RoyalGeneralMusicRoom.description>滿足將軍級別貴族的音樂室！這真的值得嗎？由於13*13無法滿足需求，所以大小是13*14</AP_RoyalGeneralMusicRoom.description>
+
+<!-- EN: 至高星主建筑群 -->
+<AP_RoyalHighStellarch.label>至高星主建築群</AP_RoyalHighStellarch.label>
+
+<!-- EN: 这就是终极了,连至高星主都能满意的卧室,谒见室,艺术室,舞厅,现在全部一起打包,只是价格有点小贵! -->
+<AP_RoyalHighStellarch.description>這就是終極了，連至高星主都能滿意的臥室、謁見室、藝術室、舞廳，現在全部一起打包，只是價格有點小貴！</AP_RoyalHighStellarch.description>
+  
+<AP_RoyalLargeNobiiltyRoom.label>將軍休息室</AP_RoyalLargeNobiiltyRoom.label>
+
+<!-- EN: 最高支持将军级别的休息室 -->
+<AP_RoyalLargeNobiiltyRoom.description>最高支援將軍級別的休息室</AP_RoyalLargeNobiiltyRoom.description>
+
+<!-- EN: 都督谒见室 -->
+<AP_RoyalMidChurchRoom.label>都督謁見室</AP_RoyalMidChurchRoom.label>
+
+<!-- EN: 最高支持都督级别贵族的谒见室 -->
+<AP_RoyalMidChurchRoom.description>最高支援都督級別貴族的謁見室</AP_RoyalMidChurchRoom.description>
+
+<!-- EN: 双都督贵族房 -->
+<AP_RoyalPeopelRoom2.label>雙都督貴族房</AP_RoyalPeopelRoom2.label>
+
+<!-- EN: 两个可以提供最高都督入住的贵族房间 -->
+<AP_RoyalPeopelRoom2.description>兩個可以提供最高都督入住的貴族房間</AP_RoyalPeopelRoom2.description>
+
+<!-- EN: 贵族房间2个 -->
+<AP_RoyalRoom2Bed.label>貴族房間2個</AP_RoyalRoom2Bed.label>
+
+<!-- EN: 有两个配备厕所的贵族房间 -->
+<AP_RoyalRoom2Bed.description>有兩個配備廁所的貴族房間</AP_RoyalRoom2Bed.description>
+
+<!-- EN: 小型机场 -->
+<AP_smallAirport.label>小型機場</AP_smallAirport.label>
+
+<!-- EN: 一个小型的机场可供飞机起降 -->
+<AP_smallAirport.description>一個小型的機場可供飛機起降</AP_smallAirport.description>
+
+<!-- EN: 小型炮塔阵地 -->
+<AP_SmallMachineSentry.label>小型砲塔陣地</AP_SmallMachineSentry.label>
+
+<!-- EN: 8个小机枪提供火力支援，有灭火装置。 -->
+<AP_SmallMachineSentry.description>8個小機槍提供火力支援，有滅火裝置。</AP_SmallMachineSentry.description>
+
+<!-- EN: 小型石化产线房 -->
+<AP_SmallRimefellerRoom.label>小型石化產線房</AP_SmallRimefellerRoom.label>
+
+<!-- EN: 包含边缘石化的部分产品线 -->
+<AP_SmallRimefellerRoom.description>包含邊緣石化的部分產品線</AP_SmallRimefellerRoom.description>
+
+<!-- EN: 谒见庭 -->
+<AP_ThroneRoom.label>謁見庭</AP_ThroneRoom.label>
+
+<!-- EN: 13*13 规格的谒见庭，同时可以进行娱乐和吃饭 -->
+<AP_ThroneRoom.description>13*13規格的謁見庭，同時可以進行娛樂和吃飯</AP_ThroneRoom.description>
+
+<!-- EN: 污染发电房 -->
+<AP_ToxPowerRoom.label>污染發電房</AP_ToxPowerRoom.label>
+
+<!-- EN: 16个污染发电机发电的房间 -->
+<AP_ToxPowerRoom.description>16個污染發電機發電的房間</AP_ToxPowerRoom.description>
+
+<!-- EN: 货运飞机带停机台 -->
+<AP_VE_AirportWithPlane1.label>貨運飛機帶停機台</AP_VE_AirportWithPlane1.label>
+
+<!-- EN: 拥有一个大型货运飞机的停机台 -->
+<AP_VE_AirportWithPlane1.description>擁有一個大型貨運飛機的停機台</AP_VE_AirportWithPlane1.description>
+
+<!-- EN: 人员运输机带停机台 -->
+<AP_VE_AirportWithPlane2.label>人員運輸機帶停機台</AP_VE_AirportWithPlane2.label>
+
+<!-- EN: 拥有一个人员运输机的停机台 -->
+<AP_VE_AirportWithPlane2.description>擁有一個人員運輸機的停機台</AP_VE_AirportWithPlane2.description>
+
+<!-- EN: 小型运输机带停机台 -->
+<AP_VE_AirportWithPlane3.label>小型運輸機帶停機台</AP_VE_AirportWithPlane3.label>
+
+<!-- EN: 拥有一个运输机的停机台 -->
+<AP_VE_AirportWithPlane3.description>擁有一個運輸機的停機台</AP_VE_AirportWithPlane3.description>
+
+<!-- EN: 大型战斗机带停机台 -->
+<AP_VE_AirportWithPlane4.label>大型戰鬥機帶停機台</AP_VE_AirportWithPlane4.label>
+
+<!-- EN: 拥有一个大型战斗机机的停机台 -->
+<AP_VE_AirportWithPlane4.description>擁有一個大型戰鬥機的停機台</AP_VE_AirportWithPlane4.description>
+
+<!-- EN: 创世纪飞船带停机台 -->
+<AP_VE_AirportWithPlane5.label>創世紀飛船帶停機台</AP_VE_AirportWithPlane5.label>
+
+<!-- EN: 拥有一个创世纪飞船的停机台 -->
+<AP_VE_AirportWithPlane5.description>擁有一個創世紀飛船的停機台</AP_VE_AirportWithPlane5.description>
+
+<!-- EN: VE防卫厅 -->
+<AP_VE_FangWeiTing.label>VE防衛廳</AP_VE_FangWeiTing.label>
+
+<!-- EN: VE模组下防卫厅，提供掩体,耐久度高且防火，可以透过四个方向射击 -->
+<AP_VE_FangWeiTing.description>VE模組下防衛廳，提供掩體、耐久度高且防火，可以透過四個方向射擊</AP_VE_FangWeiTing.description>
+
+<!-- EN: VE太阳能源室 -->
+<AP_VE_PowerRoom.label>VE太陽能源室</AP_VE_PowerRoom.label>
+
+<!-- EN: 有三个高级太阳能发电的能源室 -->
+<AP_VE_PowerRoom.description>有三個高級太陽能發電的能源室</AP_VE_PowerRoom.description>
+
+<!-- EN: 机械带宽室 -->
+<AP_VE_ShePinCenter.label>機械頻寬室</AP_VE_ShePinCenter.label>
+
+<!-- EN: 提供16个额外带宽 -->
+<AP_VE_ShePinCenter.description>提供16個額外頻寬</AP_VE_ShePinCenter.description>
+
+<!-- EN: VE水栽培室 -->
+<AP_VE_ShuiZaiPei.label>VE水栽培室</AP_VE_ShuiZaiPei.label>
+
+<!-- EN: VE模组下的水栽培室，附带喷灌器 -->
+<AP_VE_ShuiZaiPei.description>VE模組下的水栽培室，附帶噴灌器</AP_VE_ShuiZaiPei.description>
+
+<!-- EN: VE研究室医疗 -->
+<AP_VE_YanJiuShi.label>VE研究室醫療</AP_VE_YanJiuShi.label>
+
+<!-- EN: VE模组下的研究室和医疗室，有两个高级研究台和四个医疗床 -->
+<AP_VE_YanJiuShi.description>VE模組下的研究室和醫療室，有兩個高級研究台和四個醫療床</AP_VE_YanJiuShi.description>
+  
+  <AP_16PawnBarrackRoom.shortLabel>16人集體宿舍</AP_16PawnBarrackRoom.shortLabel>
+<AP_4PawnBarrackRoom.shortLabel>4人宿舍</AP_4PawnBarrackRoom.shortLabel>
+<AP_4PawnDefensWall.shortLabel>四人防禦牆</AP_4PawnDefensWall.shortLabel>
+<AP_5Room_prison.shortLabel>五人監獄</AP_5Room_prison.shortLabel>
+<AP_7Count_ContainmentCellRoom.shortLabel>異常收容房7個</AP_7Count_ContainmentCellRoom.shortLabel>
+<AP_8Room_AnomalyContainment.shortLabel>異常收容8房間</AP_8Room_AnomalyContainment.shortLabel>
+<AP_AirConRoom.shortLabel>溫控房間</AP_AirConRoom.shortLabel>
+<AP_AnomalEntityRoomType4.shortLabel>異常實體房間4*2</AP_AnomalEntityRoomType4.shortLabel>
+<AP_Anomaly8Room.shortLabel>8容納異常房</AP_Anomaly8Room.shortLabel>
+<AP_AnomalyWorkshop.shortLabel>異常工作坊</AP_AnomalyWorkshop.shortLabel>
+<AP_AP_13_13_BeginHouse1.shortLabel>初始房間1</AP_AP_13_13_BeginHouse1.shortLabel>
+<AP_AP_13_13_BeginHouse2.shortLabel>初始房間2</AP_AP_13_13_BeginHouse2.shortLabel>
+<AP_AP_13_13_BeginHouse3.shortLabel>初始房間3</AP_AP_13_13_BeginHouse3.shortLabel>
+<AP_AtomicsDenfensSentry.shortLabel>核能砲塔陣地</AP_AtomicsDenfensSentry.shortLabel>
+<AP_AtomicsHighEnergyBatteryRoom.shortLabel>核能高能電池房</AP_AtomicsHighEnergyBatteryRoom.shortLabel>
+<AP_AtomicsPowerRoomPart1.shortLabel>核電站第一部分</AP_AtomicsPowerRoomPart1.shortLabel>
+<AP_AtomicsPowerRoomPart2.shortLabel>核電站第二部分</AP_AtomicsPowerRoomPart2.shortLabel>
+<AP_AtomicsResearchRoom.shortLabel>核能科研房</AP_AtomicsResearchRoom.shortLabel>
+<AP_BabyPlayRoom.shortLabel>育兒室</AP_BabyPlayRoom.shortLabel>
+<AP_BasinRoom.shortLabel>水栽培室</AP_BasinRoom.shortLabel>
+<AP_BathRoom.shortLabel>浴室</AP_BathRoom.shortLabel>
+<AP_BestWorkshop.shortLabel>最佳工坊</AP_BestWorkshop.shortLabel>
+<AP_BigDenfensPosition.shortLabel>大型防禦陣地</AP_BigDenfensPosition.shortLabel>
+<AP_BigMechLabor.shortLabel>大型機械培育房</AP_BigMechLabor.shortLabel>
+<AP_BigResearchRoom.shortLabel>大型科研室</AP_BigResearchRoom.shortLabel>
+<AP_BigStoreRoom.shortLabel>大型倉庫</AP_BigStoreRoom.shortLabel>
+<AP_ChamberAndRangelandRoom.shortLabel>儀式房和牧場</AP_ChamberAndRangelandRoom.shortLabel>
+<AP_ChemFuelPowerRoom.shortLabel>燃料發電房</AP_ChemFuelPowerRoom.shortLabel>
+<AP_DeathRestAndStoreRoom.shortLabel>死眠室和儲存室內</AP_DeathRestAndStoreRoom.shortLabel>
+<AP_DeepDrillRoom.shortLabel>小型挖礦房</AP_DeepDrillRoom.shortLabel>
+<AP_DefensRoom1.shortLabel>防禦小屋</AP_DefensRoom1.shortLabel>
+<AP_FastSleep4Room.shortLabel>速眠4房間</AP_FastSleep4Room.shortLabel>
+<AP_GeneLabor.shortLabel>基因室</AP_GeneLabor.shortLabel>
+<AP_LargeMachineSentry.shortLabel>大型砲塔陣地</AP_LargeMachineSentry.shortLabel>
+<AP_MidMachineSentry.shortLabel>中型砲塔陣地</AP_MidMachineSentry.shortLabel>
+<AP_MortarRoom.shortLabel>迫擊砲房間</AP_MortarRoom.shortLabel>
+<AP_NeuralRoom.shortLabel>超頻房間</AP_NeuralRoom.shortLabel>
+<AP_ResearchAndMedicalRoom.shortLabel>科研和醫療房間</AP_ResearchAndMedicalRoom.shortLabel>
+<AP_RimefellerPowerRoom.shortLabel>石化發電室</AP_RimefellerPowerRoom.shortLabel>
+<AP_RoyalBedRoomAndPrison.shortLabel>貴族房間和監獄</AP_RoyalBedRoomAndPrison.shortLabel>
+<AP_RoyalGeneralArtRoom.shortLabel>將軍藝術室</AP_RoyalGeneralArtRoom.shortLabel>
+<AP_RoyalGeneralChamber.shortLabel>將軍謁見室</AP_RoyalGeneralChamber.shortLabel>
+<AP_RoyalGeneralMusicRoom.shortLabel>將軍音樂室</AP_RoyalGeneralMusicRoom.shortLabel>
+<AP_RoyalHighStellarch.shortLabel>至高星主建築群</AP_RoyalHighStellarch.shortLabel>
+<AP_RoyalLargeNobiiltyRoom.shortLabel>將軍休息室</AP_RoyalLargeNobiiltyRoom.shortLabel>
+<AP_RoyalMidChurchRoom.shortLabel>都督謁見室</AP_RoyalMidChurchRoom.shortLabel>
+<AP_RoyalPeopelRoom2.shortLabel>雙都督貴族房</AP_RoyalPeopelRoom2.shortLabel>
+<AP_RoyalRoom2Bed.shortLabel>貴族房間2個</AP_RoyalRoom2Bed.shortLabel>
+<AP_smallAirport.shortLabel>小型機場</AP_smallAirport.shortLabel>
+<AP_SmallMachineSentry.shortLabel>小型砲塔陣地</AP_SmallMachineSentry.shortLabel>
+<AP_SmallRimefellerRoom.shortLabel>小型石化產線房</AP_SmallRimefellerRoom.shortLabel>
+<AP_ThroneRoom.shortLabel>謁見庭</AP_ThroneRoom.shortLabel>
+<AP_ToxPowerRoom.shortLabel>污染發電房</AP_ToxPowerRoom.shortLabel>
+<AP_VE_AirportWithPlane1.shortLabel>貨運飛機帶停機台</AP_VE_AirportWithPlane1.shortLabel>
+<AP_VE_AirportWithPlane2.shortLabel>人員運輸機帶停機台</AP_VE_AirportWithPlane2.shortLabel>
+<AP_VE_AirportWithPlane3.shortLabel>小型運輸機帶停機台</AP_VE_AirportWithPlane3.shortLabel>
+<AP_VE_AirportWithPlane4.shortLabel>大型戰鬥機帶停機台</AP_VE_AirportWithPlane4.shortLabel>
+<AP_VE_AirportWithPlane5.shortLabel>創世紀飛船帶停機台</AP_VE_AirportWithPlane5.shortLabel>
+<AP_VE_FangWeiTing.shortLabel>VE防衛廳</AP_VE_FangWeiTing.shortLabel>
+<AP_VE_PowerRoom.shortLabel>VE太陽能源室</AP_VE_PowerRoom.shortLabel>
+<AP_VE_ShePinCenter.shortLabel>機械頻寬室</AP_VE_ShePinCenter.shortLabel>
+<AP_VE_ShuiZaiPei.shortLabel>VE水栽培室</AP_VE_ShuiZaiPei.shortLabel>
+<AP_VE_YanJiuShi.shortLabel>VE研究室醫療</AP_VE_YanJiuShi.shortLabel>
+
+</LanguageData>

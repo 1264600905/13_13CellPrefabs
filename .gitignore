@@ -1,0 +1,24 @@
+# 仅忽略Source目录下的构建产物和临时文件
+/Source/CellPrefabs/bin/
+/Source/CellPrefabs/obj/
+/Source/CellPrefabs/*.suo
+/Source/CellPrefabs/*.user
+/Source/CellPrefabs/*.userprefs
+/Source/CellPrefabs/*.sln.docstates
+/Source/CellPrefabs/TestResults/
+/Source/CellPrefabs/*.CodeAnalysisLog.xml
+/Source/CellPrefabs/publish/
+/Source/CellPrefabs/packages/
+/Source/CellPrefabs/~$*
+/Source/CellPrefabs/.vs/
+/Source/CellPrefabs/_ReSharper.*
+/Source/CellPrefabs/*.cache
+/Source/CellPrefabs/*.pidb
+/Source/CellPrefabs/*.g.cs
+/Source/CellPrefabs/*.g.i.cs
+/Source/CellPrefabs/*.AssemblyInfo.cs
+
+# 保留其他目录下的所有文件（包括1.5/Assemblies中的dll和pdb）
+!1.5/Assemblies/
+!1.5/Assemblies/**
+    

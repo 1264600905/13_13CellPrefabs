@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  
+  <!-- EN: primitive trade beacon -->
+  <ManualTradeBeacon.label>原始交易信标</ManualTradeBeacon.label>
+  <!-- EN: Primitive trade beacon without electricity. -->
+  <ManualTradeBeacon.description>神秘的原始科技让这个交易信标不需要电力也能交易！</ManualTradeBeacon.description>
+  
+</LanguageData>
