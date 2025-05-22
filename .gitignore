@@ -17,8 +17,5 @@
 /Source/CellPrefabs/*.g.cs
 /Source/CellPrefabs/*.g.i.cs
 /Source/CellPrefabs/*.AssemblyInfo.cs
-
-# 保留其他目录下的所有文件（包括1.5/Assemblies中的dll和pdb）
-!1.5/Assemblies/
-!1.5/Assemblies/**
-    
+.vs
+1.5/Assemblies/CellPrefabs.pdb

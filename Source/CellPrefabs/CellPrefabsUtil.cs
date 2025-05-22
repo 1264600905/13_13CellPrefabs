@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -27,6 +28,8 @@ namespace CellPrefabs
             // 确保导出目录存在
             Directory.CreateDirectory(exportFolderPath);
             Log.Message($"[BuildingExporter] 导出目录已创建: {exportFolderPath}");
+            // 使用反射调用KCSG.StartupActions的Initialize方法
+        
 
         }
 
@@ -166,6 +169,7 @@ namespace CellPrefabs
             }
         }
 
+
         // 导出Defs文件
         private static void ExportDefsFiles(CellRect rect, string defsFolder)
         {
@@ -188,19 +192,29 @@ namespace CellPrefabs
                 Dialog_ExportWindow.randomizeWallStuffAtGen = false ;
                 //不导出污垢
                 Dialog_ExportWindow.exportFilth = false;
+
                 //不导出地形
-                Dialog_ExportWindow.exportNatural = false;
+                Dialog_ExportWindow.exportNatural = buildingInfo.exportNatural;
                 //不导出植物
-                Dialog_ExportWindow.exportPlant = false;
+                Dialog_ExportWindow.exportPlant = buildingInfo.exportPlant;
+
                 //不随机填充
                 Dialog_ExportWindow.isStorage = false;
 
                 // 生成符号定义和布局（使用KCSG原生方法）
                 List<SymbolDef> symbolDefs = ExportUtils.CreateSymbolIfNeeded(null);
-                StructureLayoutDef structureDef = ExportUtils.CreateStructureDef(map, null);
 
-                //剔除物品信息
-               // structureDef = StripItemInfo(structureDef);
+
+                // 生成原始布局
+                var originalDef = ExportUtils.CreateStructureDef(map, null);
+                //对数据新清洗，处理掉多余的非英语，数字和下划线的符号
+                //希望没有小天才会把DefName命名成中文
+                var originalLayoutStr = originalDef.ToXMLString();
+                originalLayoutStr= ProcessXmlString(originalLayoutStr);
+                if (buildingInfo.exportCreatureAndItem)
+                {
+                    originalLayoutStr = StructureLayoutFilter.FilterCreaturesAndItems(originalLayoutStr);
+                }
 
                 // 保持与DebugActions.CalculateMarketValue一致的逻辑
                 float marketValue = CalculateMarketValue(rect);
@@ -232,7 +246,10 @@ namespace CellPrefabs
 
                 // 生成XML内容（使用KCSG的ToXMLString()）
                 string symbolDefsXml = string.Join("\n", symbolDefs.Select(s => s.ToXMLString()));
-                string structureDefXml = structureDef.ToXMLString();
+                //清洗SymbolDefsXml
+                symbolDefsXml = ProcessXmlString(symbolDefsXml);
+
+                string structureDefXml = originalLayoutStr;
 
                 // 保存文件
                 string symbolDefsPath = Path.Combine(defsFolder, "SymbolDefs.xml");
@@ -249,6 +266,15 @@ namespace CellPrefabs
                 Log.Error($"[BuildingExporter] 导出Defs文件失败: {ex.Message}");
                 throw;
             }
+        }
+
+
+        public static string ProcessXmlString(string xmlString)
+        {
+            // 匹配模式：下划线后跟随1个或多个中文字符（简体/繁体），无论前后是否有其他字符
+            string pattern = @"_[\u4e00-\u9fa5\u3400-\u4dbf\uff00-\uffef]+";
+            // 替换规则：删除下划线+中文字符段
+            return Regex.Replace(xmlString, pattern, "");
         }
 
         private static List<string> CollectModDependencies(CellRect rect)
@@ -616,6 +642,8 @@ namespace CellPrefabs
         {
             return needDLC ? (!string.IsNullOrEmpty(packageId) && packageId != "ludeon.rimworld") : (!string.IsNullOrEmpty(packageId) && packageId != "ludeon.rimworld" && !packageId.StartsWith("ludeon.rimworld."));
         }
+
+
 
     }
 }

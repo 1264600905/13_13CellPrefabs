@@ -259,7 +259,8 @@ namespace CellPrefabs
     <loadBefore>
     </loadBefore>
     <loadAfter>
-        <li>triger.alphaprefabs</li>
+        <li>sarg.cellprefabs</li>
+        <li>trigger.cellprefabs</li>
     </loadAfter>
     <manifestUri></manifestUri>
     <downloadUri></downloadUri>

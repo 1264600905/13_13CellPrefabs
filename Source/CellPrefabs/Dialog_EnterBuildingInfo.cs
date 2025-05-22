@@ -1,12 +1,10 @@
 ﻿using RimWorld;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using System;
 using UnityEngine;
 using Verse;
+using System.Linq;
 
 namespace CellPrefabs
 {
@@ -20,6 +18,9 @@ namespace CellPrefabs
         public int priority;
         public string category;
         public string author;
+        public bool exportNatural = true; // 新增：是否导出地形
+        public bool exportPlant = false;    // 新增：是否导出植物
+        public bool exportCreatureAndItem = true; // 新增：是否导出角色和物品
     }
 
     class Dialog_EnterBuildingInfo : Window
@@ -27,16 +28,27 @@ namespace CellPrefabs
         private BuildingInfo buildingInfo = new BuildingInfo();
         private Action<BuildingInfo> onCloseCallback;
 
+        private bool translateMode = false;
         private string defName = "";
-        private string label = "Build label";
-        private string description = "Building description";
+        private string label = "Type Build label";
+        private string description = "Type Building description";
         private string priority = "1";
         private string category = "";
         private string author = "unknown";
 
+        //翻译模式前的文本
+        private string originalLabel = "";
+        private string originalDescription = "";
+        private bool wasChecked = false;
+
+        // 新增：三个勾选框的状态
+        private bool exportNatural = true;
+        private bool exportPlant = true;
+        private bool exportCreatureAndItem = false;
+
         private Vector2 scrollPosition = Vector2.zero;
 
-        public override Vector2 InitialSize => new Vector2(600, 500); // 原500x400，扩大20%
+        public override Vector2 InitialSize => new Vector2(600, 600); // 增大窗口高度以容纳新选项
 
         public Dialog_EnterBuildingInfo(Action<BuildingInfo> callback)
         {
@@ -54,14 +66,13 @@ namespace CellPrefabs
             Text.Font = GameFont.Small;
 
             Rect contentRect = new Rect(inRect.x, inRect.y + 40, inRect.width, inRect.height - 100);
-            Rect viewRect = new Rect(0, 0, contentRect.width - 20, 300);
+            Rect viewRect = new Rect(0, 0, contentRect.width - 20, 400); // 增大视图高度
 
             Widgets.BeginScrollView(contentRect, ref scrollPosition, viewRect);
 
             float y = 0;
 
             // DefName
-            // 在DoWindowContents方法中修改DefName输入部分
             Widgets.Label(new Rect(0, y, 150, 30), "键值名称(DefName) :");
             Rect defNameRect = new Rect(160, y, viewRect.width - 250, 30);
             defName = Widgets.TextField(defNameRect, defName);
@@ -71,7 +82,7 @@ namespace CellPrefabs
             {
                 defName = GenerateAutoDefName();
             }
-            y += 40; // 增大间距
+            y += 40;
 
             // Label
             Widgets.Label(new Rect(0, y, 150, 24), "标签 (Label):");
@@ -88,7 +99,7 @@ namespace CellPrefabs
             priority = Widgets.TextField(new Rect(160, y, viewRect.width - 160, 30), priority);
             y += 40;
 
-            // 修改Category输入部分
+            // Category
             Widgets.Label(new Rect(0, y, 150, 30), "类别 (Category):");
             Rect categoryInputRect = new Rect(160, y, viewRect.width - 250, 30);
             category = Widgets.TextField(categoryInputRect, category);
@@ -101,12 +112,60 @@ namespace CellPrefabs
                     new FloatMenuOption(c, () => category = c)));
                 Find.WindowStack.Add(new FloatMenu(options));
             }
-            y += 40; // 增大间距
+            y += 40;
 
-             // 作者
-            Widgets.Label(new Rect(0, y, 150, 24), "作者Author:");
+            // 作者
+            Widgets.Label(new Rect(0, y, 150, 24), "作者(Author):");
             author = Widgets.TextField(new Rect(160, y, viewRect.width - 160, 30), author);
             y += 40;
+
+            // 新增：不导出地形勾选框
+             Widgets.CheckboxLabeled(
+                new Rect(0, y, viewRect.width, 30),
+                "导出地形 (export terrain)",
+                ref exportNatural);
+            y += 30;
+
+            // 新增：不导出植物勾选框
+            Widgets.CheckboxLabeled(
+                new Rect(0, y, viewRect.width, 30),
+                "导出植物 (export plants)",
+               ref exportPlant);
+            y += 30;
+
+            // 新增：导出角色和物品勾选框
+              Widgets.CheckboxLabeled(
+                new Rect(0, y, viewRect.width, 30),
+                "强制导出 (force export all thing)",
+               ref exportCreatureAndItem);
+            y += 30;
+
+            // 绘制翻译模式勾选框（移除onChanged参数）
+            Widgets.CheckboxLabeled(
+                new Rect(0, y, viewRect.width, 30),
+                "翻译模式 (Translate Mode)",
+                ref translateMode
+            );
+            y += 30;
+
+            // 检查状态是否变化
+            if (wasChecked != translateMode)
+            {
+                if (translateMode)
+                {
+                    // 勾选时保存当前值，并设置为固定文本
+                    originalLabel = label;
+                    originalDescription = description;
+                    label = "翻译模式下不适用not use in translate mod";
+                    description = "翻译模式下不适用not use in translate mod";
+                } else
+                {
+                    // 取消勾选时恢复原值
+                    label = originalLabel;
+                    description = originalDescription;
+                }
+            }
+
             Widgets.EndScrollView();
 
             // 按钮
@@ -115,14 +174,19 @@ namespace CellPrefabs
                 if (ValidateInput())
                 {
                     buildingInfo.defName = "AP_" + defName;
-                    buildingInfo.label = label;
-                    buildingInfo.shortLabel = label;
-                    buildingInfo.description = description;
+                    buildingInfo.label = translateMode ? $"{buildingInfo.defName}.label" : label;
+                    buildingInfo.description = translateMode ? $"{buildingInfo.defName}.description" : description;
+                    buildingInfo.shortLabel = buildingInfo.label;
                     buildingInfo.priority = int.Parse(priority);
                     buildingInfo.category = category;
                     buildingInfo.author = author;
+
+                    // 保存勾选框状态
+                    buildingInfo.exportNatural = !exportNatural;
+                    buildingInfo.exportPlant = !exportPlant;
+                    buildingInfo.exportCreatureAndItem = !exportCreatureAndItem;
+
                     onCloseCallback?.Invoke(buildingInfo);
-                   
                     Close();
                 }
             }
@@ -130,7 +194,6 @@ namespace CellPrefabs
             if (Widgets.ButtonText(new Rect(inRect.width / 2 + 10, inRect.height - 50, 90, 30), "取消"))
             {
                 onCloseCallback?.Invoke(null);
-              
                 Close();
             }
         }
@@ -167,22 +230,18 @@ namespace CellPrefabs
                 return false;
             }
 
-            // 确保defName正确设置
-            buildingInfo.defName = defName; // 不再添加"AP_"前缀，因为在其他地方添加
-
             CellPrefabsUtil.ResetClickPositions();
             return true;
         }
 
-        // 在 BuildingExporter 类顶部添加静态变量
+        // 类别列表保持不变
         private static readonly List<string> ValidCategories = new List<string> {
-    "AP_13_13_Dorm", "AP_13_13_Labor", "AP_13_13_Power",
-    "AP_13_13_WorkShop", "AP_13_13_StoreRoom", "AP_13_13_Farm",
-    "AP_13_13_Culture", "AP_13_13_Anomal", "AP_13_13_Defens",
-    "AP_13_13_Atomics", "AP_13_13_Bath", "AP_13_13_Oil"
-};
+            "AP_13_13_Dorm", "AP_13_13_Labor", "AP_13_13_Power",
+            "AP_13_13_WorkShop", "AP_13_13_StoreRoom", "AP_13_13_Farm",
+            "AP_13_13_Culture", "AP_13_13_Anomal", "AP_13_13_Defens",
+            "AP_13_13_Atomics", "AP_13_13_Bath", "AP_13_13_Oil"
+        };
 
-        // 在Dialog_EnterBuildingInfo类中添加
         private string GenerateAutoDefName()
         {
             return DateTime.Now.ToString("yyyyMMdd_HHmmss");

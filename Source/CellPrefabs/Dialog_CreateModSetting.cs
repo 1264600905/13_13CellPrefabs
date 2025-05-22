@@ -81,7 +81,7 @@ namespace CellPrefabs
             {
                 if (ValidateInput())
                 {
-                    onConfirmCallback?.Invoke(customName, customPackageId+PACKAGE_ID_SUFFIX);
+                    onConfirmCallback?.Invoke(customName, customPackageId+"."+ DateTime.Now.ToString("yyyyMMdd_HHmmss") +PACKAGE_ID_SUFFIX);
                     Close();
                 }
             }
