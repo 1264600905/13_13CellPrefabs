@@ -67,92 +67,116 @@ namespace CellPrefabs
                     return;
                 }
 
-                // 打开弹窗获取用户输入
                 Find.WindowStack.Add(new Dialog_CreateModSetting((name, packageId) =>
                 {
                     try
                     {
                         string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
-                        string safeModName = Path.GetInvalidFileNameChars().Aggregate(name, (current, c) => current.Replace(c, '_')); // 替换非法字符
+                        string safeModName = Path.GetInvalidFileNameChars().Aggregate(name, (current, c) => current.Replace(c, '_'));
                         string targetFolderPath = Path.Combine(modsFolderPath.Value, safeModName);
 
-                        while (Directory.Exists(targetFolderPath))
+                        // 确保目标文件夹不存在
+                        if (Directory.Exists(targetFolderPath))
                         {
-                            Directory.Delete(targetFolderPath, true); // 递归删除文件夹及其内容
+                            Directory.Delete(targetFolderPath, true);
                         }
                         Directory.CreateDirectory(targetFolderPath);
 
-                        // 获取所有AP_13_13_*格式的文件夹
-                        string[] sourceFolders = Directory.GetDirectories(exportFolderPath.Value)
-                           .Where(d => Path.GetFileName(d).StartsWith("AP_13_13_"))
-                           .ToArray();
+                        // 关键修改：获取Merge目录下的分类文件夹（如AP_Category_*）
+                        string mergePath = exportFolderPath.Value; // 假设exportFolderPath指向MyBuildings/Merge
+                        string[] categoryFolders = Directory.GetDirectories(mergePath)
+                            .Where(d => Path.GetFileName(d).StartsWith("AP_Category_")) // 过滤分类文件夹
+                            .ToArray();
 
-                        foreach (string sourceFolder in sourceFolders)
+                        if (categoryFolders.Length == 0)
                         {
-                            string folderName = Path.GetFileName(sourceFolder);
-                            ProcessSourceFolder(sourceFolder, targetFolderPath, folderName, timestamp); // 使用你已有的方法
+                            Messages.Message($"在{mergePath}中未找到分类文件夹", MessageTypeDefOf.RejectInput, historical: false);
+                            return;
                         }
 
-                        // 单独处理Textures文件夹（保持原有层级）
-                        string texturesSource = Path.Combine(exportFolderPath.Value, "Textures");
-                        if (Directory.Exists(texturesSource))
+                        // 处理每个分类文件夹中的Defs和Patches
+                        foreach (string categoryFolder in categoryFolders)
                         {
-                            CopyDirectoryRecursive(texturesSource, Path.Combine(targetFolderPath, "Textures"));
+                            string categoryName = Path.GetFileName(categoryFolder);
+                            string defsPath = Path.Combine(categoryFolder, "Defs");
+                            string patchesPath = Path.Combine(categoryFolder, "Patches");
 
-                            // 随机抽取一张PNG图片并改名Preview.png放在About.xml同级目录
-                            string[] textureFiles = Directory.GetFiles(texturesSource, "*.png", SearchOption.AllDirectories);
-                            if (textureFiles.Length > 0)
+                            // 复制Defs下的XML文件
+                            if (Directory.Exists(defsPath))
                             {
-                                Random random = new Random();
-                                int randomIndex = random.Next(textureFiles.Length);
-                                string selectedTexture = textureFiles[randomIndex];
+                                string targetDefs = Path.Combine(targetFolderPath, "Defs");
+                                Directory.CreateDirectory(targetDefs);
+                                CopyXmlFiles(defsPath, targetDefs, categoryName, timestamp);
+                            }
 
-                                // 确保About文件夹存在
-                                string aboutFolderPath = Path.Combine(targetFolderPath, "About");
-                                Directory.CreateDirectory(aboutFolderPath);
-
-                                string previewImagePath = Path.Combine(aboutFolderPath, "Preview.png");
-                                File.Copy(selectedTexture, previewImagePath, true);
-                            } else
+                            // 复制Patches下的XML文件（如果有）
+                            if (Directory.Exists(patchesPath) && Directory.GetFiles(patchesPath).Any())
                             {
-                                Messages.Message("未在Textures文件夹中找到PNG图片，无法生成预览图", MessageTypeDefOf.RejectInput, historical: false);
+                                string targetPatches = Path.Combine(targetFolderPath, "Patches");
+                                Directory.CreateDirectory(targetPatches);
+                                CopyXmlFiles(patchesPath, targetPatches, categoryName, timestamp);
                             }
                         }
 
-                        // 创建About文件夹并使用用户输入的名称和PackageId
+                        // 处理共享纹理（Merge/Textures）
+                        ProcessTextures(mergePath, targetFolderPath);
+
+                        // 创建About文件夹
                         CreateAboutFolder(targetFolderPath, name, packageId);
 
-                        Messages.Message($"建筑导出完成!\n位置: {targetFolderPath}", MessageTypeDefOf.PositiveEvent, historical: false);
+                        Messages.Message($"导出完成：{targetFolderPath}", MessageTypeDefOf.PositiveEvent);
                     } catch (Exception ex)
                     {
-                       
-                        Messages.Message($"建筑导出失败: {ex.Message}", MessageTypeDefOf.RejectInput, historical: false);
+                        Log.Error($"导出失败：{ex}");
+                        Messages.Message($"导出失败：{ex.Message}，查看日志获取详情", MessageTypeDefOf.RejectInput);
                     }
                 }));
             } catch (Exception ex)
             {
-                Messages.Message($"建筑导出失败: {ex.Message}", MessageTypeDefOf.RejectInput);
+                Log.Error($"初始化失败：{ex}");
+                Messages.Message($"初始化失败：{ex.Message}", MessageTypeDefOf.RejectInput);
             }
         }
 
-        private static void ProcessSourceFolder(string sourceFolder, string targetFolderPath, string folderName, string timestamp)
+        private static void CopyXmlFiles(string sourceDir, string targetDir, string categoryName, string timestamp)
         {
-            // 获取源文件夹下的子文件夹（如Defs、Patches）
-            string[] subFolders = Directory.GetDirectories(sourceFolder);
-
-            foreach (string subFolder in subFolders)
+            foreach (string file in Directory.GetFiles(sourceDir, "*.xml"))
             {
-                string subFolderName = Path.GetFileName(subFolder);
-                string targetSubFolderPath = Path.Combine(targetFolderPath, subFolderName);
-
-                // 创建目标子文件夹（如Mod根目录下的Defs、Patches）
-                Directory.CreateDirectory(targetSubFolderPath);
-
-                // 处理子文件夹中的文件，添加文件夹名前缀
-                ProcessFilesInFolder(subFolder, targetSubFolderPath, folderName, timestamp);
+                string fileName = Path.GetFileName(file);
+                // 新文件名格式：分类名_时间_原文件名
+                string newFileName = $"{categoryName}_{timestamp}_{fileName}";
+                File.Copy(file, Path.Combine(targetDir, newFileName), true);
             }
         }
 
+        private static void ProcessTextures(string mergePath, string targetFolderPath)
+        {
+            string texturesSource = Path.Combine(mergePath, "Textures");
+            if (!Directory.Exists(texturesSource)) return;
+
+            string targetTextures = Path.Combine(targetFolderPath, "Textures");
+            Directory.CreateDirectory(targetTextures);
+
+            // 复制所有纹理文件（保持层级）
+            foreach (string file in Directory.GetFiles(texturesSource, "*.*", SearchOption.AllDirectories))
+            {
+                string relativePath = file.Substring(texturesSource.Length + 1);
+                string targetFile = Path.Combine(targetTextures, relativePath);
+                Directory.CreateDirectory(Path.GetDirectoryName(targetFile));
+                File.Copy(file, targetFile, true);
+            }
+
+            // 生成预览图（从Textures/Prefabs_Preview随机选取）
+            string previewSource = Path.Combine(texturesSource, "Prefabs_Preview");
+            string[] previews = Directory.GetFiles(previewSource, "*.png");
+            if (previews.Length > 0)
+            {
+                string aboutPath = Path.Combine(targetFolderPath, "About");
+                Directory.CreateDirectory(aboutPath);
+                File.Copy(previews[0], Path.Combine(aboutPath, "Preview.png"), true);
+            }
+        }
+       
         private static void ProcessFilesInFolder(string sourceDir, string destDir, string folderName, string timestamp)
         {
             foreach (string file in Directory.GetFiles(sourceDir))

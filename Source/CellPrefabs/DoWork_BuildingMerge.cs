@@ -11,12 +11,8 @@ namespace RimWorld
 {
     public static class DoWork_BuildingMerge
     {
-        private static readonly string RootPath = Path.Combine(GenFilePaths.SaveDataFolderPath, "MyBuildings");
-        private static readonly string MergePath = Path.Combine(
-    AppDomain.CurrentDomain.BaseDirectory,
-    "MyBuildings",
-    "Merge"
-);
+        private static readonly string RootPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MyBuildings");
+        private static readonly string MergePath = Path.Combine(RootPath, "Merge");
 
 
 
@@ -46,6 +42,9 @@ namespace RimWorld
                 // 复制图片资源
                 CopyPreviewImages(buildingDirs);
 
+                // 新增：全局 SymbolDef 去重
+                //GlobalRemoveDuplicateSymbolDefs();
+
                 // 输出成功信息
                 Messages.Message($"成功合并 {buildingDirs.Count} 个建筑（{categoryGroups.Count} 个类别）",
                     MessageTypeDefOf.SilentInput, historical: true);
@@ -68,27 +67,100 @@ namespace RimWorld
 
         private static List<string> GetValidBuildingDirectories()
         {
-            // 使用游戏根目录下的MyBuildings文件夹
-            var rootPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "MyBuildings");
-
-            if (!Directory.Exists(rootPath))
+            if (!Directory.Exists(RootPath))
             {
-                Messages.Message($"错误：建筑根目录不存在 - {rootPath}",
+                Log.Error($"建筑根目录不存在: {RootPath}");
+                Messages.Message($"错误：建筑根目录不存在 - {RootPath}",
                     MessageTypeDefOf.RejectInput, historical: false);
                 return new List<string>();
             }
 
-            var directories = Directory.GetDirectories(rootPath)
-                .Where(dir => Path.GetFileName(dir).StartsWith("AP_"))
+            // 获取所有子目录，并排除Merge目录
+            var candidateDirs = Directory.GetDirectories(RootPath)
+                .Where(dir => !Path.GetFileName(dir).Equals("Merge", StringComparison.OrdinalIgnoreCase))
                 .ToList();
 
-            if (!directories.Any())
+            Log.Message($"找到 {candidateDirs.Count} 个候选目录");
+
+            var validDirs = new List<string>();
+
+            // 验证每个目录是否符合建筑文件夹结构
+            foreach (var dir in candidateDirs)
             {
-                Messages.Message($"错误：在 {rootPath} 下未找到任何建筑目录",
+                var dirName = Path.GetFileName(dir);
+
+                // 定义必要的目录结构
+                var requiredDirs = new[] {
+            Path.Combine(dir, "Defs"),
+            Path.Combine(dir, "Patches"),
+            Path.Combine(dir, "Textures", "Prefabs_Preview")
+        };
+
+                // 定义必要的文件（至少需要PrefabDefs.xml）
+                var requiredFiles = new[] {
+            Path.Combine(dir, "Defs", "PrefabDefs.xml")
+        };
+
+                // 定义可选文件
+                var optionalFiles = new[] {
+            Path.Combine(dir, "Defs", "BuildingLayouts.xml"),
+            Path.Combine(dir, "Defs", "SymbolDefs.xml"),
+            Path.Combine(dir, "Patches", "Patch.xml")
+        };
+
+                // 检查所有必要目录是否存在
+                bool allDirsExist = requiredDirs.All(d => Directory.Exists(d));
+
+                // 检查所有必要文件是否存在
+                bool allRequiredFilesExist = requiredFiles.All(f => File.Exists(f));
+
+                // 检查预览图片目录是否包含至少一个图片文件
+                var previewDir = Path.Combine(dir, "Textures", "Prefabs_Preview");
+                bool hasPreviewImage = Directory.Exists(previewDir) &&
+                                      Directory.GetFiles(previewDir).Any(f =>
+                                          f.EndsWith(".png", StringComparison.OrdinalIgnoreCase) ||
+                                          f.EndsWith(".jpg", StringComparison.OrdinalIgnoreCase) ||
+                                          f.EndsWith(".jpeg", StringComparison.OrdinalIgnoreCase));
+
+                // 检查存在的可选文件
+                var existingOptionalFiles = optionalFiles.Count(f => File.Exists(f));
+
+                if (allDirsExist && allRequiredFilesExist && hasPreviewImage)
+                {
+                    validDirs.Add(dir);
+                    Log.Message($"✓ 有效建筑目录: {dirName} (包含 {existingOptionalFiles} 个可选文件)");
+                } else
+                {
+                    Log.Warning($"✗ 不符合结构: {dirName}");
+
+                    // 详细记录缺失的部分
+                    if (!allDirsExist)
+                    {
+                        var missingDirs = requiredDirs.Where(d => !Directory.Exists(d)).ToList();
+                        Log.Warning($"  缺失目录: {string.Join(", ", missingDirs.Select(d => Path.GetFileName(d)))}");
+                    }
+
+                    if (!allRequiredFilesExist)
+                    {
+                        var missingFiles = requiredFiles.Where(f => !File.Exists(f)).ToList();
+                        Log.Warning($"  缺失必要文件: {string.Join(", ", missingFiles.Select(f => Path.GetFileName(f)))}");
+                    }
+
+                    if (!hasPreviewImage)
+                    {
+                        Log.Warning("  缺失预览图片");
+                    }
+                }
+            }
+
+            if (!validDirs.Any())
+            {
+                Log.Message($"在 {RootPath} 下未找到任何有效建筑目录");
+                Messages.Message($"错误：在 {RootPath} 下未找到任何有效建筑目录",
                     MessageTypeDefOf.RejectInput, historical: false);
             }
 
-            return directories;
+            return validDirs;
         }
 
         private static Dictionary<string, List<string>> GroupBuildingsByCategory(List<string> buildingDirs)
@@ -162,52 +234,87 @@ namespace RimWorld
         }
 
         private static void MergeXmlFiles(List<string> buildingDirs, string sourceFolder, string sourceFile,
-    string categoryDir, string targetFolder, string elementName)
+      string categoryDir, string targetFolder, string elementName)
         {
-            var mergedElements = new List<XElement>();
             var targetPath = Path.Combine(categoryDir, targetFolder, sourceFile);
+            var mergedElements = new List<XElement>();
+            string rootElementName = null;
 
             foreach (var buildingDir in buildingDirs)
             {
                 var sourcePath = Path.Combine(buildingDir, sourceFolder, sourceFile);
-                if (!File.Exists(sourcePath)) continue;
+                if (!File.Exists(sourcePath))
+                {
+                    Log.Message($"跳过不存在的文件: {sourcePath}");
+                    continue;
+                }
 
                 try
                 {
                     var doc = XDocument.Load(sourcePath);
                     var root = doc.Root;
-                    if (root != null)
+
+                    if (root == null)
                     {
-                        mergedElements.AddRange(root.Elements(elementName));
+                        Log.Warning($"文件 {sourcePath} 没有根元素，跳过处理");
+                        continue;
+                    }
+
+                    // 确定根元素名称（仅在第一次处理时）
+                    if (rootElementName == null)
+                    {
+                        rootElementName = root.Name.LocalName;
+                        Log.Message($"使用根元素名称: {rootElementName}");
+                    }
+
+                    // 修复：仅获取直接子元素
+                    var elements = !string.IsNullOrEmpty(elementName)
+                        ? root.Elements(elementName).ToList() // 关键修改
+                        : root.Elements().ToList();
+
+                    if (elements.Any())
+                    {
+                        mergedElements.AddRange(elements);
+                        Log.Message($"从 {sourcePath} 合并了 {elements.Count} 个 {elementName} 元素");
+                    } else
+                    {
+                        Log.Message($"在 {sourcePath} 中未找到匹配的 {elementName} 元素");
                     }
                 } catch (Exception ex)
                 {
-                    Log.Warning($"合并 {sourceFile} 时出错：{ex.Message}");
+                    Log.Error($"合并 {sourcePath} 时出错: {ex.Message}");
                 }
             }
 
-            if (mergedElements.Any())
+            if (mergedElements.Any() && rootElementName != null)
             {
-                SaveMergedXml(mergedElements, targetPath, elementName);
+                // 创建新文档，使用确定的根元素名称
+                var doc = new XDocument(
+                    new XDeclaration("1.0", "utf-8", null),
+                    new XElement(rootElementName, mergedElements)
+                );
+
+                SaveMergedXml(doc, targetPath);
+                Log.Message($"已保存合并文件: {targetPath}, 包含 {mergedElements.Count} 个元素");
             } else
             {
-                // 如果无内容且文件存在，删除空文件
+                Log.Message($"合并结果为空，删除可能存在的空文件: {targetPath}");
                 if (File.Exists(targetPath)) File.Delete(targetPath);
             }
         }
 
-        private static void SaveMergedXml(List<XElement> elements, string targetPath, string rootElement)
+        private static void SaveMergedXml(XDocument doc, string targetPath)
         {
-            var rootName = rootElement == "Operation" ? "Patch" : "Defs";
-            var doc = new XDocument(
-                new XDeclaration("1.0", "utf-8", null),
-                new XElement(rootName, elements)
-            );
-
-            Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
-            doc.Save(targetPath);
+            try
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(targetPath));
+                doc.Save(targetPath);
+            } catch (Exception ex)
+            {
+                Log.Error($"保存合并XML文件失败: {targetPath}, 错误: {ex.Message}");
+                throw;
+            }
         }
-
 
         private static void CopyPreviewImages(List<string> buildingDirs)
         {
@@ -251,20 +358,145 @@ namespace RimWorld
             Messages.Message($"警告：建筑目录解析失败 - {Path.GetFileName(dir)}",
                 MessageTypeDefOf.RejectInput, historical: false);
         }
-
-        private static void HandleXmlMergingError(string path, Exception ex)
-        {
-            Log.Warning($"合并XML失败 - {path}: {ex.Message}");
-            Messages.Message($"警告：XML合并失败 - {Path.GetFileName(path)}",
-                MessageTypeDefOf.RejectInput, historical: false);
-        }
-
-        private static void HandleImageCopyError(string dir, Exception ex)
-        {
-            Log.Warning($"图片复制失败 - {dir}: {ex.Message}");
-            Messages.Message($"警告：预览图片复制失败 - {Path.GetFileName(dir)}",
-                MessageTypeDefOf.RejectInput, historical: false);
-        }
         #endregion
+
+        private static void GlobalRemoveDuplicateSymbolDefs()
+        {
+            // 使用四元组作为唯一键：(defName, thing, stuff, rotation)
+            var uniqueSymbolDefs = new Dictionary<(string defName, string thing, string stuff, string rotation), XElement>();
+            var categoryDirs = Directory.GetDirectories(MergePath);
+
+            // 第一阶段：收集所有SymbolDefs并识别真正的重复项
+            foreach (var categoryDir in categoryDirs)
+            {
+                var defsPath = Path.Combine(categoryDir, "Defs", "SymbolDefs.xml");
+
+                if (!File.Exists(defsPath))
+                {
+                    Log.Message($"跳过不存在的文件: {defsPath}");
+                    continue;
+                }
+
+                try
+                {
+                    var doc = XDocument.Load(defsPath);
+                    var root = doc.Root;
+
+                    if (root == null)
+                    {
+                        Log.Warning($"文件没有根元素，跳过处理: {defsPath}");
+                        continue;
+                    }
+
+                    var symbolDefs = root.Elements("KCSG.SymbolDef").ToList();
+
+                    foreach (var def in symbolDefs)
+                    {
+                        var defNameElement = def.Element("defName");
+                        if (defNameElement == null)
+                        {
+                            Log.Warning($"发现没有defName的SymbolDef，跳过: {def.ToString().Truncate(50)}");
+                            continue;
+                        }
+
+                        var defName = defNameElement.Value.Trim();
+                        var thingElement = def.Element("thing");
+                        if (thingElement == null)
+                        {
+                            Log.Warning($"发现没有thing的SymbolDef，跳过: {def.ToString().Truncate(50)}");
+                            continue;
+                        }
+
+                        var thing = thingElement.Value.Trim();
+                        var stuff = def.Element("stuff")?.Value.Trim() ?? "";
+                        var rotation = def.Element("rotation")?.Value.Trim() ?? "";
+
+                        // 创建四元组作为键
+                        var key = (defName, thing, stuff, rotation);
+
+                        // 如果发现重复项，记录冲突信息
+                        if (uniqueSymbolDefs.ContainsKey(key))
+                        {
+                            Log.Message($"发现完全重复的SymbolDef - defName: {defName}, Thing: {thing}, Stuff: {stuff}, Rotation: {rotation}");
+                            Log.Message($"  来源1: {GetCategoryFromPath(uniqueSymbolDefs[key].Document?.BaseUri)}");
+                            Log.Message($"  来源2: {GetCategoryFromPath(def.Document?.BaseUri)}");
+
+                            // 标记当前def为重复项（稍后移除）
+                            def.AddAnnotation(new XAttribute("IsDuplicate", "true"));
+                        } else
+                        {
+                            uniqueSymbolDefs[key] = def;
+                        }
+                    }
+                } catch (Exception ex)
+                {
+                    Log.Error($"收集SymbolDefs时出错: {ex.Message}");
+                }
+            }
+
+            // 第二阶段：移除所有标记为重复的项
+            foreach (var categoryDir in categoryDirs)
+            {
+                var defsPath = Path.Combine(categoryDir, "Defs", "SymbolDefs.xml");
+
+                if (!File.Exists(defsPath))
+                {
+                    continue;
+                }
+
+                try
+                {
+                    var doc = XDocument.Load(defsPath);
+                    var root = doc.Root;
+
+                    if (root == null)
+                    {
+                        continue;
+                    }
+
+                    var duplicateCount = 0;
+                    var symbolDefs = root.Elements("KCSG.SymbolDef").ToList();
+
+                    foreach (var def in symbolDefs)
+                    {
+                        var isDuplicate = def.Annotations<XAttribute>()
+                            .FirstOrDefault(a => a.Name.LocalName == "IsDuplicate")?.Value == "true";
+
+                        if (isDuplicate)
+                        {
+                            def.Remove();
+                            duplicateCount++;
+                        }
+                    }
+
+                    if (duplicateCount > 0)
+                    {
+                        Log.Message($"从 {categoryDir} 的SymbolDefs.xml中移除了 {duplicateCount} 个重复项");
+                        doc.Save(defsPath);
+                    }
+                } catch (Exception ex)
+                {
+                    Log.Error($"移除重复项时出错: {ex.Message}");
+                }
+            }
+
+            Log.Message($"全局SymbolDef去重完成，共处理 {uniqueSymbolDefs.Count} 个唯一定义");
+        }
+
+        // 辅助方法：从文件路径提取类别名称
+        private static string GetCategoryFromPath(string path)
+        {
+            if (string.IsNullOrEmpty(path)) return "未知";
+
+            try
+            {
+                var uri = new Uri(path);
+                var directory = Path.GetDirectoryName(uri.LocalPath);
+                return Path.GetFileName(directory);
+            } catch
+            {
+                return "未知";
+            }
+        }
     }
 }
