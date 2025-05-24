@@ -22,10 +22,8 @@ namespace RimWorld
         {
             try
             {
-                // 初始化合并目录
                 InitializeMergeDirectory();
 
-                // 获取所有建筑目录
                 var buildingDirs = GetValidBuildingDirectories();
                 if (buildingDirs.Count == 0)
                 {
@@ -33,27 +31,33 @@ namespace RimWorld
                     return;
                 }
 
-                // 按类别分组建筑
-                var categoryGroups = GroupBuildingsByCategory(buildingDirs);
+                // 直接合并所有建筑，不分类
+                PerformGlobalMerging(buildingDirs);
 
-                // 执行合并操作
-                PerformMerging(categoryGroups);
-
-                // 复制图片资源
                 CopyPreviewImages(buildingDirs);
 
-                // 新增：全局 SymbolDef 去重
-                //GlobalRemoveDuplicateSymbolDefs();
-
-                // 输出成功信息
-                Messages.Message($"成功合并 {buildingDirs.Count} 个建筑（{categoryGroups.Count} 个类别）",
+                Messages.Message($"成功合并 {buildingDirs.Count} 个建筑",
                     MessageTypeDefOf.SilentInput, historical: true);
             } catch (Exception ex)
             {
-                // 统一错误处理
                 HandleMergeException(ex);
             }
         }
+
+
+        private static void PerformGlobalMerging(List<string> buildingDirs)
+        {
+            // 创建合并目录结构
+            Directory.CreateDirectory(Path.Combine(MergePath, "Defs"));
+            Directory.CreateDirectory(Path.Combine(MergePath, "Patches"));
+
+            // 合并所有XML文件到全局文件
+            MergeXmlFiles(buildingDirs, "Defs", "BuildingLayouts.xml", MergePath, "Defs", "KCSG.StructureLayoutDef");
+            MergeXmlFiles(buildingDirs, "Defs", "PrefabDefs.xml", MergePath, "Defs", "AlphaPrefabs.PrefabDef");
+            MergeXmlFiles(buildingDirs, "Defs", "SymbolDefs.xml", MergePath, "Defs", "KCSG.SymbolDef");
+            MergeXmlFiles(buildingDirs, "Patches", "Patch.xml", MergePath, "Patches", "Operation");
+        }
+
         private static void InitializeMergeDirectory()
         {
             // 清空并重建Merge目录
@@ -63,6 +67,8 @@ namespace RimWorld
             }
             Directory.CreateDirectory(MergePath);
             Directory.CreateDirectory(Path.Combine(MergePath, "Textures/Prefabs_Preview"));
+            Directory.CreateDirectory(Path.Combine(MergePath, "Defs"));
+            Directory.CreateDirectory(Path.Combine(MergePath, "Patches"));
         }
 
         private static List<string> GetValidBuildingDirectories()
@@ -163,75 +169,6 @@ namespace RimWorld
             return validDirs;
         }
 
-        private static Dictionary<string, List<string>> GroupBuildingsByCategory(List<string> buildingDirs)
-        {
-            var groups = new Dictionary<string, List<string>>();
-
-            foreach (var dir in buildingDirs)
-            {
-                var prefabPath = Path.Combine(dir, "Defs/PrefabDefs.xml");
-                if (!File.Exists(prefabPath))
-                {
-                    Log.Warning($"跳过无效建筑目录：{dir}（缺少PrefabDefs.xml）");
-                    continue;
-                }
-
-                try
-                {
-                    var category = GetCategoryFromPrefab(prefabPath);
-                    if (string.IsNullOrEmpty(category)) continue;
-
-                    if (!groups.ContainsKey(category)) groups[category] = new List<string>();
-                    groups[category].Add(dir);
-                } catch (Exception ex)
-                {
-                    HandleXmlParsingError(dir, ex);
-                }
-            }
-
-            return groups;
-        }
-
-        private static string GetCategoryFromPrefab(string prefabPath)
-        {
-            var doc = XDocument.Load(prefabPath);
-            var categoryElement = doc.Descendants("category").FirstOrDefault();
-
-            if (categoryElement == null)
-            {
-                Messages.Message($"警告：建筑目录缺少分类标签 - {Path.GetFileName(Path.GetDirectoryName(prefabPath))}",
-                    MessageTypeDefOf.RejectInput, historical: false);
-                return null;
-            }
-
-            var category = categoryElement.Value.Trim();
-            if (string.IsNullOrEmpty(category))
-            {
-                Messages.Message($"警告：建筑目录分类标签为空 - {Path.GetFileName(Path.GetDirectoryName(prefabPath))}",
-                    MessageTypeDefOf.RejectInput, historical: false);
-            }
-            return category;
-        }
-
-        private static void PerformMerging(Dictionary<string, List<string>> groups)
-        {
-            foreach (var (category, buildingDirs) in groups)
-            {
-                // 创建类别文件夹
-                var categoryDir = Path.Combine(MergePath, category);
-                Directory.CreateDirectory(categoryDir);
-                Directory.CreateDirectory(Path.Combine(categoryDir, "Defs"));
-                Directory.CreateDirectory(Path.Combine(categoryDir, "Patches"));
-
-                // 合并Defs文件夹下的XML（BuildingLayouts、PrefabDefs、SymbolDefs）
-                MergeXmlFiles(buildingDirs, "Defs", "BuildingLayouts.xml", categoryDir, "Defs", "KCSG.StructureLayoutDef");
-                MergeXmlFiles(buildingDirs, "Defs", "PrefabDefs.xml", categoryDir, "Defs", "AlphaPrefabs.PrefabDef");
-                MergeXmlFiles(buildingDirs, "Defs", "SymbolDefs.xml", categoryDir, "Defs", "KCSG.SymbolDef");
-
-                // 合并Patches文件夹下的XML（Patch.xml）
-                MergeXmlFiles(buildingDirs, "Patches", "Patch.xml", categoryDir, "Patches", "Operation");
-            }
-        }
 
         private static void MergeXmlFiles(List<string> buildingDirs, string sourceFolder, string sourceFile,
       string categoryDir, string targetFolder, string elementName)
@@ -344,159 +281,11 @@ namespace RimWorld
             }
         }
 
-        #region 错误处理辅助方法
         private static void HandleMergeException(Exception ex)
         {
             Log.Error($"合并失败：{ex.Message}\n{ex.StackTrace}");
             Messages.Message("建筑合并失败，请检查日志文件",
                 MessageTypeDefOf.RejectInput, historical: false);
-        }
-
-        private static void HandleXmlParsingError(string dir, Exception ex)
-        {
-            Log.Warning($"解析PrefabDefs.xml失败 - {dir}: {ex.Message}");
-            Messages.Message($"警告：建筑目录解析失败 - {Path.GetFileName(dir)}",
-                MessageTypeDefOf.RejectInput, historical: false);
-        }
-        #endregion
-
-        private static void GlobalRemoveDuplicateSymbolDefs()
-        {
-            // 使用四元组作为唯一键：(defName, thing, stuff, rotation)
-            var uniqueSymbolDefs = new Dictionary<(string defName, string thing, string stuff, string rotation), XElement>();
-            var categoryDirs = Directory.GetDirectories(MergePath);
-
-            // 第一阶段：收集所有SymbolDefs并识别真正的重复项
-            foreach (var categoryDir in categoryDirs)
-            {
-                var defsPath = Path.Combine(categoryDir, "Defs", "SymbolDefs.xml");
-
-                if (!File.Exists(defsPath))
-                {
-                    Log.Message($"跳过不存在的文件: {defsPath}");
-                    continue;
-                }
-
-                try
-                {
-                    var doc = XDocument.Load(defsPath);
-                    var root = doc.Root;
-
-                    if (root == null)
-                    {
-                        Log.Warning($"文件没有根元素，跳过处理: {defsPath}");
-                        continue;
-                    }
-
-                    var symbolDefs = root.Elements("KCSG.SymbolDef").ToList();
-
-                    foreach (var def in symbolDefs)
-                    {
-                        var defNameElement = def.Element("defName");
-                        if (defNameElement == null)
-                        {
-                            Log.Warning($"发现没有defName的SymbolDef，跳过: {def.ToString().Truncate(50)}");
-                            continue;
-                        }
-
-                        var defName = defNameElement.Value.Trim();
-                        var thingElement = def.Element("thing");
-                        if (thingElement == null)
-                        {
-                            Log.Warning($"发现没有thing的SymbolDef，跳过: {def.ToString().Truncate(50)}");
-                            continue;
-                        }
-
-                        var thing = thingElement.Value.Trim();
-                        var stuff = def.Element("stuff")?.Value.Trim() ?? "";
-                        var rotation = def.Element("rotation")?.Value.Trim() ?? "";
-
-                        // 创建四元组作为键
-                        var key = (defName, thing, stuff, rotation);
-
-                        // 如果发现重复项，记录冲突信息
-                        if (uniqueSymbolDefs.ContainsKey(key))
-                        {
-                            Log.Message($"发现完全重复的SymbolDef - defName: {defName}, Thing: {thing}, Stuff: {stuff}, Rotation: {rotation}");
-                            Log.Message($"  来源1: {GetCategoryFromPath(uniqueSymbolDefs[key].Document?.BaseUri)}");
-                            Log.Message($"  来源2: {GetCategoryFromPath(def.Document?.BaseUri)}");
-
-                            // 标记当前def为重复项（稍后移除）
-                            def.AddAnnotation(new XAttribute("IsDuplicate", "true"));
-                        } else
-                        {
-                            uniqueSymbolDefs[key] = def;
-                        }
-                    }
-                } catch (Exception ex)
-                {
-                    Log.Error($"收集SymbolDefs时出错: {ex.Message}");
-                }
-            }
-
-            // 第二阶段：移除所有标记为重复的项
-            foreach (var categoryDir in categoryDirs)
-            {
-                var defsPath = Path.Combine(categoryDir, "Defs", "SymbolDefs.xml");
-
-                if (!File.Exists(defsPath))
-                {
-                    continue;
-                }
-
-                try
-                {
-                    var doc = XDocument.Load(defsPath);
-                    var root = doc.Root;
-
-                    if (root == null)
-                    {
-                        continue;
-                    }
-
-                    var duplicateCount = 0;
-                    var symbolDefs = root.Elements("KCSG.SymbolDef").ToList();
-
-                    foreach (var def in symbolDefs)
-                    {
-                        var isDuplicate = def.Annotations<XAttribute>()
-                            .FirstOrDefault(a => a.Name.LocalName == "IsDuplicate")?.Value == "true";
-
-                        if (isDuplicate)
-                        {
-                            def.Remove();
-                            duplicateCount++;
-                        }
-                    }
-
-                    if (duplicateCount > 0)
-                    {
-                        Log.Message($"从 {categoryDir} 的SymbolDefs.xml中移除了 {duplicateCount} 个重复项");
-                        doc.Save(defsPath);
-                    }
-                } catch (Exception ex)
-                {
-                    Log.Error($"移除重复项时出错: {ex.Message}");
-                }
-            }
-
-            Log.Message($"全局SymbolDef去重完成，共处理 {uniqueSymbolDefs.Count} 个唯一定义");
-        }
-
-        // 辅助方法：从文件路径提取类别名称
-        private static string GetCategoryFromPath(string path)
-        {
-            if (string.IsNullOrEmpty(path)) return "未知";
-
-            try
-            {
-                var uri = new Uri(path);
-                var directory = Path.GetDirectoryName(uri.LocalPath);
-                return Path.GetFileName(directory);
-            } catch
-            {
-                return "未知";
-            }
         }
     }
 }

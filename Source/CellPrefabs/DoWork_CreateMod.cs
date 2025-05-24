@@ -71,7 +71,6 @@ namespace CellPrefabs
                 {
                     try
                     {
-                        string timestamp = DateTime.Now.ToString("yyyyMMdd_HHmmss");
                         string safeModName = Path.GetInvalidFileNameChars().Aggregate(name, (current, c) => current.Replace(c, '_'));
                         string targetFolderPath = Path.Combine(modsFolderPath.Value, safeModName);
 
@@ -82,39 +81,39 @@ namespace CellPrefabs
                         }
                         Directory.CreateDirectory(targetFolderPath);
 
-                        // 关键修改：获取Merge目录下的分类文件夹（如AP_Category_*）
-                        string mergePath = exportFolderPath.Value; // 假设exportFolderPath指向MyBuildings/Merge
-                        string[] categoryFolders = Directory.GetDirectories(mergePath)
-                            .Where(d => Path.GetFileName(d).StartsWith("AP_Category_")) // 过滤分类文件夹
-                            .ToArray();
+                        string mergePath = exportFolderPath.Value;
 
-                        if (categoryFolders.Length == 0)
+                        // 直接处理Merge目录下的Defs和Patches文件夹
+                        string defsPath = Path.Combine(mergePath, "Defs");
+                        string patchesPath = Path.Combine(mergePath, "Patches");
+
+                        // 复制Defs下的XML文件
+                        if (Directory.Exists(defsPath))
                         {
-                            Messages.Message($"在{mergePath}中未找到分类文件夹", MessageTypeDefOf.RejectInput, historical: false);
-                            return;
+                            string targetDefs = Path.Combine(targetFolderPath, "Defs");
+                            Directory.CreateDirectory(targetDefs);
+
+                            // 直接复制所有XML文件，不使用时间戳前缀
+                            foreach (string file in Directory.GetFiles(defsPath, "*.xml"))
+                            {
+                                string fileName = Path.GetFileName(file);
+                                // 移除时间戳前缀，直接使用原文件名
+                                File.Copy(file, Path.Combine(targetDefs, fileName), true);
+                            }
                         }
 
-                        // 处理每个分类文件夹中的Defs和Patches
-                        foreach (string categoryFolder in categoryFolders)
+                        // 复制Patches下的XML文件（如果有）
+                        if (Directory.Exists(patchesPath) && Directory.GetFiles(patchesPath).Any())
                         {
-                            string categoryName = Path.GetFileName(categoryFolder);
-                            string defsPath = Path.Combine(categoryFolder, "Defs");
-                            string patchesPath = Path.Combine(categoryFolder, "Patches");
+                            string targetPatches = Path.Combine(targetFolderPath, "Patches");
+                            Directory.CreateDirectory(targetPatches);
 
-                            // 复制Defs下的XML文件
-                            if (Directory.Exists(defsPath))
+                            // 直接复制所有XML文件，不使用时间戳前缀
+                            foreach (string file in Directory.GetFiles(patchesPath, "*.xml"))
                             {
-                                string targetDefs = Path.Combine(targetFolderPath, "Defs");
-                                Directory.CreateDirectory(targetDefs);
-                                CopyXmlFiles(defsPath, targetDefs, categoryName, timestamp);
-                            }
-
-                            // 复制Patches下的XML文件（如果有）
-                            if (Directory.Exists(patchesPath) && Directory.GetFiles(patchesPath).Any())
-                            {
-                                string targetPatches = Path.Combine(targetFolderPath, "Patches");
-                                Directory.CreateDirectory(targetPatches);
-                                CopyXmlFiles(patchesPath, targetPatches, categoryName, timestamp);
+                                string fileName = Path.GetFileName(file);
+                                // 移除时间戳前缀，直接使用原文件名
+                                File.Copy(file, Path.Combine(targetPatches, fileName), true);
                             }
                         }
 
@@ -138,16 +137,7 @@ namespace CellPrefabs
             }
         }
 
-        private static void CopyXmlFiles(string sourceDir, string targetDir, string categoryName, string timestamp)
-        {
-            foreach (string file in Directory.GetFiles(sourceDir, "*.xml"))
-            {
-                string fileName = Path.GetFileName(file);
-                // 新文件名格式：分类名_时间_原文件名
-                string newFileName = $"{categoryName}_{timestamp}_{fileName}";
-                File.Copy(file, Path.Combine(targetDir, newFileName), true);
-            }
-        }
+
 
         private static void ProcessTextures(string mergePath, string targetFolderPath)
         {
@@ -198,7 +188,7 @@ namespace CellPrefabs
             }
         }
 
-        private static void CopyAndRenameFiles(string sourceDir, string destDir, string timestamp)
+        private static void CopyAndRenameFiles(string sourceDir, string destDir)
         {
             Directory.CreateDirectory(destDir);
 
@@ -206,9 +196,8 @@ namespace CellPrefabs
             foreach (string file in Directory.GetFiles(sourceDir))
             {
                 string fileName = Path.GetFileName(file);
-                string newFileName = $"{Path.GetFileName(sourceDir)}_{timestamp}_{fileName}"; // 文件夹名_时间_原文件名
-                string destFile = Path.Combine(destDir, newFileName);
-
+                // 直接使用原文件名，不添加任何前缀
+                string destFile = Path.Combine(destDir, fileName);
                 File.Copy(file, destFile, true);
             }
 
@@ -216,7 +205,7 @@ namespace CellPrefabs
             foreach (string subDir in Directory.GetDirectories(sourceDir))
             {
                 string subDestDir = Path.Combine(destDir, Path.GetFileName(subDir));
-                CopyAndRenameFiles(subDir, subDestDir, timestamp);
+                CopyAndRenameFiles(subDir, subDestDir);
             }
         }
 

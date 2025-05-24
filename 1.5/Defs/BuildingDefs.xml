@@ -10,7 +10,7 @@
     <category>Building</category>
 
     <graphicData>
-      <texPath>Things/Building/Special/ManualTradeBeacon</texPath> <!-- 确保图像存在 -->
+      <texPath>13_13_Cell_Prefabs_Logo</texPath> <!-- 确保图像存在 -->
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1.2</drawSize>
     </graphicData>
